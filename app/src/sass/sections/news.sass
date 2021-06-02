@@ -1,0 +1,68 @@
+.news
+  margin-bottom: 180px
+  .container
+    @include dfr()
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  &-wrapper
+    @include dfc()
+    width: 100%
+    flex-grow: 1
+  &-tag
+    position: absolute
+    top: 8px
+    right: 8px
+    color: #fff
+    background-color: $lightgreen
+    border-radius: 0 10px
+    padding: 4px 11px 5px
+    font-size: 16px
+    line-height: 17px
+    font-weight: 600
+    text-align: center
+  &-list
+    @include dfr()
+    justify-content: space-between
+  &-item
+    width: calc(100% / 4 - 60px)
+    &__href
+      @include dfc()
+      position: relative
+    &__info
+      margin-top: 24px
+    &__title
+      font-size: 18px
+      line-height: 26px
+      font-weight: 600
+      color: $black
+      margin-top: 11px
+.main-news
+  width: 100%
+  @include dfr()
+  position: relative
+  margin-bottom: 60px
+  margin-top: 40px
+  &__info
+    border: 1px solid #F5F6F4
+    border-right: none
+    padding-left: 50px
+    padding-right: 110px
+    @include dfc()
+    justify-content: center
+  &__title
+    color: $black
+    font-size: 24px
+    line-height: 30px
+    font-weight: 600
+    margin-top: 10px
+  &__desc
+    color: $black
+    margin-top: 24px
+
+.date
+  font-size: 14px
+  line-height: 20px
+  font-weight: 600
+  color: $black
+  opacity: 0.4
