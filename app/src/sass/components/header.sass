@@ -1,0 +1,38 @@
+.header
+  padding-top: 25px
+  &-wrapper
+    @include dfr()
+    justify-content: space-between
+  &-menu
+    @include dfr()
+    justify-content: flex-start
+    align-items: flex-start
+  &-nav
+    @include dfr()
+    justify-content: flex-start
+    &__item
+      margin-left: 40px
+      &:first-child
+        margin-left: 0px
+      a
+        color: $green
+        font-weight: 600
+        font-size: 16px
+        line-height: 28px
+  &-search
+    margin-left: 40px
+  &-contacts
+    @include dfr()
+    a
+      font-size: 16px
+      line-height: 28px
+      color: $green
+  &-lang
+    margin-right: 30px
+  &-tel
+    margin-right: 30px
+  &-links
+    a
+      margin-right: 14px
+      &:last-child
+        margin-right: 0px
