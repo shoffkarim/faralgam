@@ -24,3 +24,7 @@ gulp.task("pug", function () {
 
     .pipe(gulp.dest(src.build.html));
 });
+
+gulp.task('watcher', function () {
+  gulp.watch("app/src/pug/*.pug", gulp.parallel('pug'));
+});

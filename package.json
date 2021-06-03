@@ -8,7 +8,9 @@
     "dev": "webpack -d",
     "devWatch": "webpack -d --watch",
     "buildPug": "parcel build app/src/pug/index.pug --out-dir app/build --public-url ./",
-    "devPug": "parcel app/src/pug/index.pug --out-dir app/build/ --public-url ./"
+    "devPug": "parcel app/src/pug/index.pug --out-dir app/build/ --public-url ./",
+    "gulpPug": "gulp pug",
+    "gulp": "gulp watcher"
   },
   "author": "shoffkarim",
   "license": "ISC",
