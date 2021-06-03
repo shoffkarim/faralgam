@@ -1,4 +1,7 @@
 .products
+  .section-head
+    h2
+      max-width: 675px
   &-list
     @include dfc()
   &-row
@@ -6,10 +9,13 @@
     align-items: flex-start
     &--1
       justify-content: flex-end
+      align-items: flex-end
     &--2
       justify-content: center
+      align-items: center
     &--3
       justify-content: flex-start
+      align-items: flex-end
   &-item
     position: relative
     &__name
