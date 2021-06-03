@@ -1,10 +1,13 @@
 .mainscreen
   .text-container
-      svg(xmlns="http://www.w3.org/2000/svg" width="100%" height="194px" )
-        defs
-          mask(id="LetMask")
-            rect(x="0" y="0" width="100%" height="100%" fill="black")
-            text.text-img.first(font-size="220px" font-weight="700" font-family="Montserrat" x="305" y="200" fill="white" style="z-index: 11;") ФерЭльГам
-        image.img-in-text(xlink:href="img/logo-back.png" width="100%" height="100%" mask="url(#LetMask)")
+    include ../blocks/faralgam
+    img(src="img/logo-back.png", alt="alt")
+      //- svg(xmlns="http://www.w3.org/2000/svg" width="100%" height="194px" )
+      //-   defs
+      //-     mask(id="LetMask")
+      //-       rect(x="0" y="0" width="100%" height="100%" fill="black")
+      //-       text.text-img.first(font-size="220px" font-weight="700" font-family="Montserrat" x="305" y="200" fill="white" style="z-index: 11;") ФерЭльГам
+      //-   image.img-in-text(xlink:href="img/logo-back.png" width="100%" height="100%" mask="url(#LetMask)")
+
   .img-container
     img(src="img/mainscreen-plate.png", alt="alt")
