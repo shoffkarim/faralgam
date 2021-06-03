@@ -99,7 +99,15 @@
     <div class="main">
       <div class="mainscreen">
         <div class="text-container">
-          <p>ФерЭльГам</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="194px">
+            <defs>
+              <mask id="LetMask">
+                <rect x="0" y="0" width="100%" height="100%" fill="black"></rect>
+                <text class="text-img first" font-size="220px" font-weight="700" font-family="Montserrat" x="305" y="200" fill="white" style="z-index: 11;">ФерЭльГам</text>
+              </mask>
+            </defs>
+            <image class="img-in-text" xlink:href="img/logo-back.png" width="100%" height="100%" mask="url(#LetMask)"></image>
+          </svg>
         </div>
         <div class="img-container"><img src="img/mainscreen-plate.png" alt="alt"></div>
       </div>
