@@ -7,11 +7,25 @@
     @include dfr()
     justify-content: flex-start
     align-items: flex-start
+    padding-top: 13px
   &-nav
     @include dfr()
     justify-content: flex-start
     &__item
       margin-left: 40px
+      position: relative
+      padding-right: 13px
+      &--sublist
+        &::after
+          content: ""
+          width: 7px
+          height: 7px
+          background-image: url(/app/build/img/header-arrow.svg)
+          background-repeat: no-repeat
+          background-size: contain
+          position: absolute
+          right: 0
+          top: calc(50% - 3.5px)
       &:first-child
         margin-left: 0px
       a
@@ -20,19 +34,28 @@
         font-size: 16px
         line-height: 28px
   &-search
-    margin-left: 40px
+    margin-left: 27px
+    padding-top: 4px
   &-contacts
     @include dfr()
+    padding-top: 13px
     a
       font-size: 16px
       line-height: 28px
       color: $green
   &-lang
-    margin-right: 30px
+    margin-right: 41px
+    font-size: 16px
+    line-height: 28px
+    font-weight: 600
   &-tel
-    margin-right: 30px
+    margin-right: 42px
+    font-size: 16px
+    line-height: 28px
+    font-weight: 600
   &-links
+    padding-top: 2px
     a
-      margin-right: 14px
+      margin-right: 17px
       &:last-child
         margin-right: 0px
