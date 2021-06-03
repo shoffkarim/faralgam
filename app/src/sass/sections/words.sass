@@ -1,0 +1,29 @@
+.words
+  overflow: hidden
+  position: relative
+  height: 260px
+  &-line
+    @include dfr()
+    position: absolute
+
+    animation-name: words
+    animation-duration: 10s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    p
+      text-transform: uppercase
+      font-size: 77px
+      font-weight: 400
+      letter-spacing: 0.01em
+      color: $green
+      white-space: pre
+    &--1
+      top: 0
+    &--2
+      top: 110px
+      animation-direction: reverse
+@keyframes words
+  0%
+    left: -100%
+  100%
+    left: 100%
