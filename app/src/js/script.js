@@ -1,6 +1,9 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-undef */
 // STYLES=============================================================================
 import '../sass/style.sass';
+
+import scrollMagic from "./modules/scrollMagicInit";
 
 // eslint-disable-next-line no-unused-vars
 let shopsSlider = new Swiper(".shops-slider", {
@@ -12,3 +15,5 @@ let shopsSlider = new Swiper(".shops-slider", {
     prevEl: ".shops-slider-prev",
   },
 });
+
+scrollMagic();
