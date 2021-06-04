@@ -1,5 +1,9 @@
 .products
+  .container
+    padding: 0 114px 0 160px
   .section-head
+    position: relative
+    z-index: 2
     h2
       max-width: 675px
   &-list
@@ -9,13 +13,30 @@
     align-items: flex-start
     &--1
       justify-content: flex-end
-      align-items: flex-end
+      align-items: center
+      margin-top: -69px
+      .products-item
+        &:first-child
+          margin-right: 293px
+          margin-top: 31px
     &--2
       justify-content: center
       align-items: center
+      margin-top: -50px
+      margin-left: 43px
+      .products-item
+        &:first-child
+          margin-right: 98px
+          margin-top: -127px
     &--3
       justify-content: flex-start
       align-items: flex-end
+      margin-top: -180px
+      margin-left: 8px
+      .products-item
+        &:nth-child(2)
+          margin-left: 226px
+          margin-bottom: -37px
   &-item
     position: relative
     &__name
