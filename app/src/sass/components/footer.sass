@@ -19,6 +19,8 @@
       margin-bottom: 50px
     &__address
       max-width: 290px
+      @media screen and ( max-width: 1366px )
+        max-width: 205px
       p
         color: $green
   &-nav
@@ -27,6 +29,8 @@
     flex-grow: 1
     margin-left: 126px
     padding-right: 216px
+    @media screen and ( max-width: 1366px )
+      padding-right: 150px
     &__item
       a
         font-size: 20px
@@ -40,6 +44,8 @@
       max-width: 210px
     &__subitem
       margin-bottom: 16px
+      @media screen and ( max-width: 1366px )
+        margin-bottom: 17px
       a
         color: $green
   &-img
@@ -50,6 +56,8 @@
     margin-top: 85px
     background-color: #B5D075
     padding: 19px 0px
+    @media screen and ( max-width: 1366px )
+      margin-top: 65px
     .container
       @include dfr()
       justify-content: space-between
