@@ -5,6 +5,13 @@
   &-wrapper
     @include dfr()
     justify-content: space-between
+  &-logo
+    @media screen and ( max-width: 500px )
+      width: 100px
+    svg
+      width: 100%
+      height: 100%
+      object-fit: contain
   &-menu
     @include dfr()
     justify-content: flex-start

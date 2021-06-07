@@ -15,8 +15,15 @@ let shopsSlider = new Swiper(".shops-slider", {
     prevEl: ".shops-slider-prev",
   },
   breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 15
+    },
+    650: {
+      slidesPerView: 2.5,
+    },
     768: {
-      slidesPerView: 3
+      slidesPerView: 3.5
     },
     1366: {
       slidesPerView: 5
