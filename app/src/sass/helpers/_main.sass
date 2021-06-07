@@ -23,6 +23,10 @@ body
     color: #fff
     font-weight: 600
     padding: 12px 25px
+    transition: all 0.4s
+    &:hover
+      background-color: #B5D075
+
 
 .section
   &-head
@@ -42,6 +46,7 @@ body
       color: $green
       position: relative
       padding-right: 32px
+      transition: all 0.4s
       &::after
         content: ""
         display: block
@@ -53,6 +58,9 @@ body
         position: absolute
         top: calc(50% - 6px)
         right: 0
+      &:hover
+        color: $lightgreen
+        transition: all 0.4s
 
 .delimeter-img
   text-align: center

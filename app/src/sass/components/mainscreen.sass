@@ -1,20 +1,25 @@
 .mainscreen
   position: relative
+  height: 100vh
+  min-height: 700px
   .text-container
     position: relative
     height: 385px
-    margin-top: 52px
+    margin-top: 91px
     overflow: hidden
+    @media screen and ( max-width: 1366px )
+      margin-top: -48px
     svg
-      position: absolute
-      top: 0
-      left: 0
+      position: relative
       width: 100%
       stroke: #000
       height: 100%
       object-fit: contain
       z-index: 2
       fill: transparent
+      transform: scale(1.2)
+      @media screen and ( max-width: 1366px )
+        transform: scale(1.025)
       path
         fill: #fff
         stroke: #fff
@@ -29,6 +34,10 @@
       animation-timing-function: ease
       animation-duration: 10s
       animation-iteration-count: infinite
+      @media screen and ( max-width: 1366px )
+        animation-name: imgInText1366
+      @media screen and ( max-width: 500px )
+        animation: none
     p
       font-size: 220px
       color: $green
@@ -44,11 +53,38 @@
     position: relative
     margin-top: -339px
     margin-left: 27px
+    transform-origin: 50% 50%
+    animation: rotateIt3
+    animation-duration: 90s
+    animation-timing-function: linear
+    animation-iteration-count: infinite
+    @media screen and ( max-width: 1366px )
+      margin: 0 auto
+      position: absolute
+      width: 760px
+      top: 70px
+      left: calc(50% - 360px)
+    @media screen and ( max-width: 1000px )
+      width: 600px
+      left: calc(50% - 285px)
+      top: 100px
+    @media screen and ( max-width: 650px )
+      width: 480px
+      left: calc(50% - 220px)
+      top: 120px
+    @media screen and ( max-width: 400px )
+      width: 300px
+      left: calc(50% - 145px)
+      top: 145px
     img
       width: auto
       height: auto
       object-fit: contain
       display: block
+      @media screen and ( max-width: 1366px )
+        width: 100%
+        height: 100%
+        object-fit: cover
 
 @keyframes imgInText
   0%
@@ -57,3 +93,16 @@
     transform: scale(1.0)
   100%
     transform: scale(2.0)
+@keyframes imgInText1366
+  0%
+    transform: scale(1.5)
+  50%
+    transform: scale(1.0)
+  100%
+    transform: scale(1.5)
+
+@keyframes rotateIt3
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)

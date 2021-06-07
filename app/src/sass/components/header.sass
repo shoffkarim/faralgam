@@ -91,6 +91,13 @@
     padding-top: 4px
     @media screen and ( max-width: 1366px )
       margin-left: 16px
+    &:hover
+      circle, path
+        stroke: $lightgreen
+        transition: all 0.4s
+    circle, path
+      stroke: $green
+      transition: all 0.4s
   &-contacts
     @include dfr()
     padding-top: 13px
@@ -98,6 +105,10 @@
       font-size: 16px
       line-height: 28px
       color: $green
+      transition: all 0.4s
+      &:hover
+        color: $lightgreen
+        transition: all 0.4s
   &-lang
     margin-right: 41px
     font-size: 16px
@@ -126,3 +137,10 @@
         margin-right: 0px
       &:last-child
         margin-right: 0px
+      &:hover
+        circle, path
+          fill: $lightgreen
+          transition: all 0.4s
+      circle, path
+        fill: $green
+        transition: all 0.4s
