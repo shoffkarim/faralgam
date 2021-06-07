@@ -3,6 +3,8 @@
   position: relative
   height: 260px
   margin-top: 171px
+  @media screen and ( max-width: 1440px )
+    margin-top: 124px
   &-line
     @include dfr()
     position: absolute
@@ -13,6 +15,8 @@
     animation-iteration-count: infinite
     animation-timing-function: linear
     animation-fill-mode: forwards
+    background-size: cover
+
     p
       text-transform: uppercase
       font-size: 77px
@@ -24,11 +28,16 @@
       top: 0
       background-image: url(/app/build/img/words1.svg)
       background-repeat: repeat-x
+      @media screen and ( max-width: 1440px )
+        height: 117px
     &--2
       top: 110px
       background-image: url(/app/build/img/words2.svg)
       background-repeat: repeat-x
       animation-direction: reverse
+      @media screen and ( max-width: 1440px )
+        top: 48px
+        height: 198px
 @keyframes words
   0%
     background-position-x: 0%

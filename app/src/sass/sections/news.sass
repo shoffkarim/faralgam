@@ -1,6 +1,8 @@
 .news
   margin-bottom: 180px
   padding-top: 180px
+  @media screen and ( max-width: 1440px )
+    padding-top: 150px
   .container
     @include dfr()
     flex-wrap: wrap
@@ -27,6 +29,8 @@
     justify-content: space-between
   &-item
     width: calc(100% / 4 - 45px)
+    @media screen and ( max-width: 1366px )
+      width: calc(25% - 32px)
     &__href
       @include dfc()
       position: relative
@@ -41,12 +45,16 @@
     &__img
       img
         display: block
+        width: 100%
 .main-news
   width: 100%
   @include dfr()
   position: relative
   margin-bottom: 60px
   margin-top: 40px
+  @media screen and ( max-width: 1440px )
+    max-height: 410px
+    margin-bottom: 39px
   &__info
     border: 1px solid #F5F6F4
     border-right: none
@@ -55,6 +63,9 @@
     padding-bottom: 33px
     @include dfc()
     justify-content: center
+    @media screen and ( max-width: 1440px )
+      padding-bottom: 0px
+      min-width: 495px
   &__title
     color: $black
     font-size: 24px
@@ -67,6 +78,9 @@
   &__img
     img
       display: block
+      @media screen and ( max-width: 1440px )
+        width: auto
+        height: 100%
 
 .date
   font-size: 14px

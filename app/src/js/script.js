@@ -9,11 +9,19 @@ import scrollMagic from "./modules/scrollMagicInit";
 let shopsSlider = new Swiper(".shops-slider", {
   slidesPerView: 5,
   spaceBetween: 35,
-  loop: true,
+  loop: false,
   navigation: {
     nextEl: ".shops-slider-next",
     prevEl: ".shops-slider-prev",
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 3
+    },
+    1366: {
+      slidesPerView: 5
+    }
+  }
 });
 
 scrollMagic();
