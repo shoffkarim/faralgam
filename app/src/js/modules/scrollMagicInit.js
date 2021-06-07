@@ -12,19 +12,19 @@ function scrollMagic() {
     let scenes = [];
     let cloudAnimation1 = new TimelineMax();
     cloudAnimation1
-    .to(".gallery-column--1", 50, { x: "-100%", ease: Power1.easeOut }, 0)
-    .to(".gallery-column--2", 150, { x: "-250%", ease: Power1.easeOut }, 0)
-    .to(".gallery-column--4", 150, { x: "250%", ease: Power1.easeOut }, 0)
-    .to(".gallery-column--5", 50, { x: "100%", ease: Power1.easeOut }, 0);
-    // .to(".gallery-column--3", 150, {
-    //   width: "100%",
-    //   ease: Circ.easeOut,
-    // }, 0);
-    // TweenMax.set(".gallery-column--3", { transformOrigin: "0% 0%" });
+    .to(".gallery-column--1", 500, { x: "-=250%", ease: Power1.easeOut }, 0)
+    .to(".gallery-column--2", 500, { x: "-=250%", ease: Power1.easeOut }, 0)
+    .to(".gallery-column--4", 500, { x: "+=250%", ease: Power1.easeOut }, 0)
+    .to(".gallery-column--5", 500, { x: "+=250%", ease: Power1.easeOut }, 0)
+    .to(".gallery-column--3 .gallery-item", 500, {
+      width: "100%",
+      ease: Circ.easeOut,
+    }, 0);
+    // TweenMax.set(".gallery-column--3 .gallery-item", { transformOrigin: "0% 0%" });
     scenes.push(
       new ScrollMagic.Scene({
         triggerElement: ".js-gallery",
-        duration: "100%",
+        duration: "500%",
         triggerHook: 0,
         offset: 0,
       })
@@ -35,7 +35,7 @@ function scrollMagic() {
     scenes.push(
       new ScrollMagic.Scene({
         triggerElement: ".gallery-wrapper",
-        duration: "120%",
+        duration: "500%",
         triggerHook: 0,
         offset: 0,
       })
