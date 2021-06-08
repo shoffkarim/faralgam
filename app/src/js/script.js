@@ -1,10 +1,24 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-undef */
 // STYLES=============================================================================
 import '../sass/style.sass';
+import BubbleCreator from './modules/bubble-hover';
 
 import scrollMagic from "./modules/scrollMagicInit";
 
+if (document.querySelector(".js-bubble-hover")) {
+  let bubbleCreators = [];
+  document.querySelectorAll(".js-bubble-hover").forEach(function (item) {
+      bubbleCreators.push(new BubbleCreator(item));
+  });
+
+  window.addEventListener("resize", function () {
+      bubbleCreators.forEach(function (item) {
+          item.calcBubbleSize();
+      });
+  });
+}
 // eslint-disable-next-line no-unused-vars
 let shopsSlider = new Swiper(".shops-slider", {
   slidesPerView: 5,
@@ -29,6 +43,17 @@ let shopsSlider = new Swiper(".shops-slider", {
       slidesPerView: 5
     }
   }
+});
+
+const swiper = new Swiper(".gallery-popup-slider", {
+  pagination: {
+    el: ".gallery-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".gallery-slider-next",
+    prevEl: ".gallery-slider-prev",
+  },
 });
 
 scrollMagic();
