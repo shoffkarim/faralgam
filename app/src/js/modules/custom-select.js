@@ -13,6 +13,8 @@ class CustomSelect {
         const dropdown = i.querySelector(".js-select-dropdown");
         const elems = i.querySelectorAll(".js-select-item");
         const overlay = i.querySelector(".js-select-overlay");
+        input.value = elems[0].dataset.value;
+        active.innerHTML = elems[0].innerHTML;
         active.addEventListener("click", function () {
           dropdown.classList.toggle("open-dropdown");
           active.classList.toggle("open-dropdown");
