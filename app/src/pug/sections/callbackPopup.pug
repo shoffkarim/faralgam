@@ -7,7 +7,16 @@
       form.form.callback-form(action="" method="method")
         .form-block
           label.form-label(for="") Тема
-          input.form-input(type="text" date-req="true" data-valid="true")
+          .custom-select
+            input(type="text")
+            .custom-select__inner
+              p.custom-select__choice Другая тема
+              .custom-select__dropdown
+                ul.custom-select__list
+                  li.custom-select__item Другая тема
+                  li.custom-select__item Стать партнером
+                  li.custom-select__item Задать вопрос
+                  li.custom-select__item Оставить отзыв
         .form-block
           label.form-label(for="") Имя*
           input.form-input(type="text" date-req="true" data-valid="true")

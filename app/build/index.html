@@ -394,7 +394,20 @@
           <form class="form callback-form" action="" method="method">
             <div class="form-block">
               <label class="form-label" for="">Тема</label>
-              <input class="form-input" type="text" date-req="true" data-valid="true">
+              <div class="custom-select">
+                <input type="text">
+                <div class="custom-select__inner">
+                  <p class="custom-select__choice">Другая тема</p>
+                  <div class="custom-select__dropdown">
+                    <ul class="custom-select__list">
+                      <li class="custom-select__item">Другая тема</li>
+                      <li class="custom-select__item">Стать партнером</li>
+                      <li class="custom-select__item">Задать вопрос</li>
+                      <li class="custom-select__item">Оставить отзыв</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="form-block">
               <label class="form-label" for="">Имя*</label>
