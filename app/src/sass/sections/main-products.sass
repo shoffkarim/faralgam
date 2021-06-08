@@ -1,10 +1,13 @@
 .products
   padding-top: 60px
   margin-bottom: 222px
+  position: relative
   @media screen and ( max-width: 1440px )
     margin-bottom: 205px
   .container
     padding: 0 114px 0 160px
+    position: relative
+    z-index: 2
     @media screen and ( max-width: 1366px )
       padding: 0 35px
   .section-head
@@ -189,3 +192,39 @@
         height: auto
         object-fit: contain
         max-width: 100%
+  &-background
+    position: absolute
+    z-index: 1
+    width: 100%
+    height: calc(100% + 90px)
+    top: -90px
+    left: 0
+    overflow-x: hidden
+    @media screen and ( max-width: 767px )
+      top: 0px
+    @media screen and ( max-width: 650px )
+      display: none
+    &__img
+      position: absolute
+      img
+        display: block
+        width: 100%
+        height: 100%
+      &--1
+        top: 315px
+        left: calc(50% - 385px)
+      &--2
+        top: 675px
+        left: 130px
+      &--3
+        top: 635px
+        left: calc(50% + 60px)
+      &--4
+        top: 610px
+        left: calc(100% - 300px)
+      &--5
+        top: 1280px
+        left: calc(50% - 120px)
+      &--6
+        top: 1260px
+        left: calc(50% + 425px)
