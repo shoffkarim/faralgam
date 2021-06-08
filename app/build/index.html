@@ -170,17 +170,17 @@
         </div>
         <div class="gallery-wrapper">
           <div class="gallery-column gallery-column--1">
-            <div class="gallery-item js-bubble-hover">
+            <div class="gallery-item js-bubble-hover js-popup-open" data-popup="gallery">
               <div class="gallery-item__img"><img src="img/gallery/1.png" alt="alt"></div>
               <div class="gallery-item__text">Выращиваем</div>
             </div>
           </div>
           <div class="gallery-column gallery-column--2">
-            <div class="gallery-item js-bubble-hover">
+            <div class="gallery-item js-bubble-hover js-popup-open" data-popup="gallery">
               <div class="gallery-item__img"><img src="img/gallery/2.png" alt="alt"></div>
               <div class="gallery-item__text">Перерабатываем</div>
             </div>
-            <div class="gallery-item js-bubble-hover">
+            <div class="gallery-item js-bubble-hover js-popup-open" data-popup="gallery">
               <div class="gallery-item__img"><img src="img/gallery/3.png" alt="alt"></div>
               <div class="gallery-item__text">Готовим</div>
             </div>
@@ -191,17 +191,17 @@
             </div>
           </div>
           <div class="gallery-column gallery-column--4">
-            <div class="gallery-item js-bubble-hover">
+            <div class="gallery-item js-bubble-hover js-popup-open" data-popup="gallery">
               <div class="gallery-item__img"><img src="img/gallery/5.png" alt="alt"></div>
               <div class="gallery-item__text">Упаковываем</div>
             </div>
-            <div class="gallery-item js-bubble-hover">
+            <div class="gallery-item js-bubble-hover js-popup-open" data-popup="gallery">
               <div class="gallery-item__img"><img src="img/gallery/6.png" alt="alt"></div>
               <div class="gallery-item__text">Контролируем качество</div>
             </div>
           </div>
           <div class="gallery-column gallery-column--5">
-            <div class="gallery-item js-bubble-hover">
+            <div class="gallery-item js-bubble-hover js-popup-open" data-popup="gallery">
               <div class="gallery-item__img"><img src="img/gallery/7.png" alt="alt"></div>
               <div class="gallery-item__text">Доставляем</div>
             </div>
@@ -342,7 +342,7 @@
         <div class="footer-bottom__dev"><a href=""><span>DEXTRA</span><span>Разработка<br>сайта</span></a></div>
       </div>
     </div>
-    <div class="popup popup-gallery popup-open js-popup" data-popup="gallery">
+    <div class="popup popup-gallery js-popup" data-popup="gallery">
       <div class="popup-overlay"></div>
       <div class="popup-container">
         <div class="gallery-popup-slider swiper-container">
@@ -376,6 +376,13 @@
             <div class="gallery-pagination"></div>
           </div>
         </div>
+      </div>
+      <div class="popup-close">
+        <button><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 1L1 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+<path d="M1 1L25 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+</svg>
+        </button>
       </div>
     </div>
     <script src="js/swiper.min.js"></script>

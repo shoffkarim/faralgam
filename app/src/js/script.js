@@ -4,7 +4,7 @@
 // STYLES=============================================================================
 import '../sass/style.sass';
 import BubbleCreator from './modules/bubble-hover';
-
+import Popup from './modules/popup';
 import scrollMagic from "./modules/scrollMagicInit";
 
 if (document.querySelector(".js-bubble-hover")) {
@@ -19,6 +19,9 @@ if (document.querySelector(".js-bubble-hover")) {
       });
   });
 }
+
+const popup = new Popup();
+
 // eslint-disable-next-line no-unused-vars
 let shopsSlider = new Swiper(".shops-slider", {
   slidesPerView: 5,

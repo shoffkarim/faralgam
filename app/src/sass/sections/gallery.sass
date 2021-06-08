@@ -42,6 +42,7 @@
   &-item
     position: relative
     overflow: hidden
+    cursor: pointer
     & + .gallery-item
       margin-top: 48px
     &__text
@@ -60,7 +61,7 @@
     height: 100%
   &-slide
     position: relative
-    width: 100%
+    width: calc(100% + 17px)
     height: 100%
     @include dfr()
     &__img
