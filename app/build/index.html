@@ -394,18 +394,17 @@
           <form class="form callback-form" action="" method="method">
             <div class="form-block">
               <label class="form-label" for="">Тема</label>
-              <div class="custom-select">
-                <input type="text">
-                <div class="custom-select__inner">
-                  <p class="custom-select__choice">Другая тема</p>
-                  <div class="custom-select__dropdown">
-                    <ul class="custom-select__list">
-                      <li class="custom-select__item">Другая тема</li>
-                      <li class="custom-select__item">Стать партнером</li>
-                      <li class="custom-select__item">Задать вопрос</li>
-                      <li class="custom-select__item">Оставить отзыв</li>
-                    </ul>
-                  </div>
+              <div class="custom-select js-custom-select">
+                <input class="js-select-input" type="text">
+                <div class="custom-select__inner js-select-choice">Другая тема</div>
+                <div class="custom-select__dropdown js-select-dropdown">
+                  <div class="custom-select__overlay js-select-overlay"></div>
+                  <ul class="custom-select__list">
+                    <li class="custom-select__item js-select-item" data-value="Другая тема">Другая тема</li>
+                    <li class="custom-select__item js-select-item" data-value="Стать партнером">Стать партнером</li>
+                    <li class="custom-select__item js-select-item" data-value="Задать вопрос">Задать вопрос</li>
+                    <li class="custom-select__item js-select-item" data-value="Оставить отзыв">Оставить отзыв</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -439,6 +438,13 @@
             </div>
           </form>
         </div>
+      </div>
+      <div class="popup-close">
+        <button><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 1L1 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+<path d="M1 1L25 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+</svg>
+        </button>
       </div>
     </div>
     <script src="js/swiper.min.js"></script>

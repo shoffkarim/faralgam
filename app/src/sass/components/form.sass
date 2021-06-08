@@ -84,6 +84,7 @@
 
 .custom-select
   width: 100%
+  position: relative
   input
     display: none
   &__inner
@@ -108,6 +109,11 @@
       position: absolute
       top: calc(50% - 3px)
       right: 16px
+      transform: rotate(180deg)
+    &.open-dropdown
+      &::before
+        transform: rotate(0deg)
+        transition: all 0.4s
   &__dropdown
     position: absolute
     background-color: #fff
@@ -115,6 +121,28 @@
     width: 100%
     left: 0px
     padding: 2px 16px
+    height: 0%
+    opacity: 0
+    visibility: hidden
+    transition: all 0.4s
+    &.open-dropdown
+      height: 200px
+      opacity: 1
+      visibility: visible
+      transition: height 0.4s opacity 0.4s 0.2s
+      .custom-select__list
+        height: 200px
+        opacity: 1
+        visibility: visible
+        transition: height 0.2s, opacity 0.4s 0.2s
+  &__list
+    overflow-y: auto
+    height: 0%
+    opacity: 0
+    visibility: hidden
+    transition: height 0.4s, opacity 0.2s 
+    z-index: 101
+    position: relative
   &__item
     font-size: 16px
     line-height: 22px
@@ -127,3 +155,12 @@
       color: $lightgreen
     &:last-child
       border-bottom: none
+  .open-dropdown
+    .custom-select__overlay
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: transparent
+      z-index: 99

@@ -7,16 +7,16 @@
       form.form.callback-form(action="" method="method")
         .form-block
           label.form-label(for="") Тема
-          .custom-select
-            input(type="text")
-            .custom-select__inner
-              p.custom-select__choice Другая тема
-              .custom-select__dropdown
-                ul.custom-select__list
-                  li.custom-select__item Другая тема
-                  li.custom-select__item Стать партнером
-                  li.custom-select__item Задать вопрос
-                  li.custom-select__item Оставить отзыв
+          .custom-select.js-custom-select
+            input(type="text").js-select-input
+            .custom-select__inner.js-select-choice Другая тема
+            .custom-select__dropdown.js-select-dropdown
+              .custom-select__overlay.js-select-overlay
+              ul.custom-select__list
+                li.custom-select__item.js-select-item(data-value="Другая тема") Другая тема
+                li.custom-select__item.js-select-item(data-value="Стать партнером") Стать партнером
+                li.custom-select__item.js-select-item(data-value="Задать вопрос") Задать вопрос
+                li.custom-select__item.js-select-item(data-value="Оставить отзыв") Оставить отзыв
         .form-block
           label.form-label(for="") Имя*
           input.form-input(type="text" date-req="true" data-valid="true")
@@ -37,3 +37,6 @@
               p Даю согласие на обработку <a href="">персональных данных</a>
           .form-button
             button.btn Отправить
+  .popup-close
+    button
+      include ../blocks/closeBtn.pug
