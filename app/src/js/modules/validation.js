@@ -7,7 +7,6 @@ class Validation {
   init() {
     if (document.querySelector(".js-submit")) {
       let btnsSubmit = document.querySelectorAll(".js-submit");
-      console.log(btnsSubmit);
       btnsSubmit.forEach((i) => i.addEventListener("click", function (e) {
         const form = i.closest(".js-form");
         let validList = form.querySelectorAll(".js-valid");
