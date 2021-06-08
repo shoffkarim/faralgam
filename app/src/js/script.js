@@ -7,6 +7,7 @@ import BubbleCreator from './modules/bubble-hover';
 import CustomSelect from './modules/custom-select';
 import Popup from './modules/popup';
 import scrollMagic from "./modules/scrollMagicInit";
+import Validation from './modules/validation';
 
 if (document.querySelector(".js-bubble-hover")) {
   let bubbleCreators = [];
@@ -23,6 +24,7 @@ if (document.querySelector(".js-bubble-hover")) {
 
 const popup = new Popup();
 const select = new CustomSelect();
+const valid = new Validation();
 // eslint-disable-next-line no-unused-vars
 let shopsSlider = new Swiper(".shops-slider", {
   slidesPerView: 5,

@@ -300,7 +300,7 @@
           <div class="footer-contacts">
             <div class="footer-contacts__tel"><a href="+74956482999">+7 (495) 648-29-99</a></div>
             <div class="footer-contacts__button">
-              <button class="btn btn--green">Напишите нам</button>
+              <button class="btn btn--green js-popup-open" data-popup="callback">Напишите нам</button>
             </div>
             <div class="footer-contacts__address">
               <p class="common-text">143007,&nbsp;Московская обл., г.&nbsp;Одинцово, ул.&nbsp;Ново&#8209;Спортивная, д.&nbsp;4,&nbsp;кор.&nbsp;3,&nbsp;офис&nbsp;2</p>
@@ -385,13 +385,13 @@
         </button>
       </div>
     </div>
-    <div class="popup popup-callback popup-open js-popup" data-popup="callback">
+    <div class="popup popup-callback js-popup" data-popup="callback">
       <div class="popup-overlay"></div>
       <div class="popup-container">
         <div class="callback-wrapper">
           <p class="callback-title">Обратная связь</p>
           <p class="callback-desc">Для того, чтобы связаться с нами, пожалуйста, заполните форму и наши менеджеры свяжутся с вами в ближайшее время. *&nbsp;—&nbsp;поля&nbsp;обязательны&nbsp;для&nbsp;заполнения.</p>
-          <form class="form callback-form" action="" method="method">
+          <form class="form callback-form js-form" action="" method="method">
             <div class="form-block">
               <label class="form-label" for="">Тема</label>
               <div class="custom-select js-custom-select">
@@ -410,30 +410,30 @@
             </div>
             <div class="form-block">
               <label class="form-label" for="">Имя*</label>
-              <input class="form-input" type="text" date-req="true" data-valid="true">
+              <input class="form-input js-valid" type="text">
             </div>
             <div class="form-block">
               <label class="form-label" for="">Телефон*</label>
-              <input class="form-input" type="text" date-req="true" data-valid="true">
+              <input class="form-input js-valid" type="tel">
             </div>
             <div class="form-block">
               <label class="form-label" for="">Email*</label>
-              <input class="form-input" type="text" date-req="true" data-valid="true">
+              <input class="form-input js-valid" type="email">
             </div>
             <div class="form-block">
               <label class="form-label" for="">Сообщение*</label>
-              <textarea class="form-textarea" type="text" date-req="true" data-valid="true"></textarea>
+              <textarea class="form-textarea js-valid" type="text"></textarea>
             </div>
             <div class="form-bottom">
               <div class="form-agree">
                 <label class="fake-checkbox" for="checkbox1">
-                  <input type="checkbox" name="" id="checkbox1">
+                  <input class="js-valid" type="checkbox" name="" id="checkbox1">
                   <div class="fake-checkbox__box"></div>
                   <p>Даю согласие на обработку <a href="">персональных данных</a></p>
                 </label>
               </div>
               <div class="form-button">
-                <button class="btn">Отправить</button>
+                <button class="btn js-submit">Отправить</button>
               </div>
             </div>
           </form>

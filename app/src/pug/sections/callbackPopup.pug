@@ -1,10 +1,10 @@
-.popup.popup-callback.popup-open.js-popup(data-popup="callback")
+.popup.popup-callback.js-popup(data-popup="callback")
   .popup-overlay
   .popup-container
     .callback-wrapper
       p.callback-title Обратная связь
       p.callback-desc Для того, чтобы связаться с нами, пожалуйста, заполните форму и наши менеджеры свяжутся с вами в ближайшее время. *&nbsp;—&nbsp;поля&nbsp;обязательны&nbsp;для&nbsp;заполнения.
-      form.form.callback-form(action="" method="method")
+      form.form.callback-form.js-form(action="" method="method")
         .form-block
           label.form-label(for="") Тема
           .custom-select.js-custom-select
@@ -19,24 +19,24 @@
                 li.custom-select__item.js-select-item(data-value="Оставить отзыв") Оставить отзыв
         .form-block
           label.form-label(for="") Имя*
-          input.form-input(type="text" date-req="true" data-valid="true")
+          input.form-input.js-valid(type="text")
         .form-block
           label.form-label(for="") Телефон*
-          input.form-input(type="text" date-req="true" data-valid="true")
+          input.form-input.js-valid(type="tel")
         .form-block
           label.form-label(for="") Email*
-          input.form-input(type="text" date-req="true" data-valid="true")
+          input.form-input.js-valid(type="email")
         .form-block
           label.form-label(for="") Сообщение*
-          textarea.form-textarea(type="text" date-req="true" data-valid="true")
+          textarea.form-textarea.js-valid(type="text")
         .form-bottom
           .form-agree
             label.fake-checkbox(for="checkbox1")
-              input(type="checkbox", name="" id="checkbox1")
+              input.js-valid(type="checkbox", name="" id="checkbox1")
               .fake-checkbox__box
               p Даю согласие на обработку <a href="">персональных данных</a>
           .form-button
-            button.btn Отправить
+            button.btn.js-submit Отправить
   .popup-close
     button
       include ../blocks/closeBtn.pug
