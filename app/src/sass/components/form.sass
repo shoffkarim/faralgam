@@ -1,0 +1,83 @@
+.form
+  &-block
+    width: 100%
+    margin-bottom: 15px
+  &-input
+    width: 100%
+    border: none
+    background-color: #fff
+    font-size: 16px
+    line-height: 28px
+    font-weight: 400
+    color: $black
+    padding: 10px 16px
+  &-textarea
+    width: 100%
+    border: none
+    background-color: #fff
+    font-size: 16px
+    line-height: 28px
+    font-weight: 400
+    color: $black
+    padding: 10px 16px
+    resize: none
+  &-label
+    font-size: 14px
+    line-height: 28px
+    font-weight: 500
+    color: #fff
+  &-button
+    width: 100%
+    button
+      width: 100%
+      background-color: $lightgreen
+      color: #fff
+      font-size: 14px
+      line-height: 28px
+      font-weight: 500
+      padding: 10px
+      transition: all 0.4s
+      &:hover
+        background-color: #9DC73B
+.fake-checkbox
+  @include dfr()
+  align-items: center
+  cursor: pointer
+  input
+    display: none
+    &:checked
+      + .fake-checkbox__box::before
+        opacity: 1
+        transition: all 0.4s
+  &__box
+    min-width: 20px
+    min-height: 20px
+    width: 20px
+    height: 20px
+    background-color: #fff
+    position: relative
+    &::before
+      content: ""
+      width:10px
+      height: 8px
+      position: absolute
+      top: calc(50% - 4px)
+      left: calc(50% - 5px)
+      background-image: url(/app/build/img/checkbox-arrow.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      opacity: 0
+      transition: all 0.4s
+  p
+    margin-left: 8px
+    font-size: 14px
+    line-height: 18px
+    font-weight: 400
+    color: #fff
+    a
+      border-bottom: 1px solid rgba(255,255,255,1)
+      color: #fff
+      transition: all 0.4s
+      &:hover
+        border-bottom-color: rgba(255,255,255,0)
+        transition: all 0.4s

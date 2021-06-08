@@ -1,30 +1,30 @@
-.popup.popup-callback.js-popup(data-popup="callback")
+.popup.popup-callback.popup-open.js-popup(data-popup="callback")
   .popup-overlay
   .popup-container
     .callback-wrapper
       p.callback-title Обратная связь
-      p.callback-desc Для того, чтобы связаться с нами, пожалуйста, заполните форму и наши менеджеры свяжутся с вами в ближайшее время.* — поля обязательны для заполнения.
+      p.callback-desc Для того, чтобы связаться с нами, пожалуйста, заполните форму и наши менеджеры свяжутся с вами в ближайшее время. *&nbsp;—&nbsp;поля&nbsp;обязательны&nbsp;для&nbsp;заполнения.
       form.form.callback-form(action="" method="method")
         .form-block
-          label.form-label(for="")
+          label.form-label(for="") Тема
           input.form-input(type="text" date-req="true" data-valid="true")
         .form-block
-          label.form-label(for="")
+          label.form-label(for="") Имя*
           input.form-input(type="text" date-req="true" data-valid="true")
         .form-block
-          label.form-label(for="")
+          label.form-label(for="") Телефон*
           input.form-input(type="text" date-req="true" data-valid="true")
         .form-block
-          label.form-label(for="")
+          label.form-label(for="") Email*
           input.form-input(type="text" date-req="true" data-valid="true")
         .form-block
-          label.form-label(for="")
+          label.form-label(for="") Сообщение*
           textarea.form-textarea(type="text" date-req="true" data-valid="true")
         .form-bottom
           .form-agree
-            label.fake-checkbox
-              input(type="checkbox", name="")
+            label.fake-checkbox(for="checkbox1")
+              input(type="checkbox", name="" id="checkbox1")
               .fake-checkbox__box
               p Даю согласие на обработку <a href="">персональных данных</a>
           .form-button
-            button.form-btn.btn Отправить
+            button.btn Отправить
