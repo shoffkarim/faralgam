@@ -51,7 +51,7 @@ let shopsSlider = new Swiper(".shops-slider", {
   }
 });
 
-const swiper = new Swiper(".gallery-popup-slider", {
+const gallerySlider = new Swiper(".gallery-popup-slider", {
   pagination: {
     el: ".gallery-pagination",
     type: "fraction",
@@ -61,5 +61,8 @@ const swiper = new Swiper(".gallery-popup-slider", {
     prevEl: ".gallery-slider-prev",
   },
 });
-
+const galleryBtns = document.querySelectorAll(".js-gallery-btn");
+galleryBtns.forEach((btn) => btn.addEventListener("click", function () {
+  gallerySlider.slideTo(btn.dataset.id - 1);
+}));
 scrollMagic();
