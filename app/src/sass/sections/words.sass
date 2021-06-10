@@ -2,7 +2,7 @@
   // overflow: hidden
   position: relative
   height: 260px
-  margin-top: 171px
+  margin-top: 137px
   @media screen and ( max-width: 1440px )
     margin-top: 124px
   @media screen and ( max-width: 767px )
@@ -11,7 +11,7 @@
     @include dfr()
     position: absolute
     width: 100%
-    height: 185px
+
     animation-name: words
     animation-duration: 1000s
     animation-iteration-count: infinite
@@ -30,13 +30,15 @@
       top: 0
       background-image: url(/app/build/img/words1.svg)
       background-repeat: repeat-x
+      height: 158px
       @media screen and ( max-width: 1440px )
         height: 117px
     &--2
-      top: 110px
+      top: 74px
       background-image: url(/app/build/img/words2.svg)
       background-repeat: repeat-x
       animation-direction: reverse
+      height: 260px
       @media screen and ( max-width: 1440px )
         top: 48px
         height: 198px
