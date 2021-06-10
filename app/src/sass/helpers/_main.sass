@@ -124,3 +124,18 @@ body
       object-fit: contain
 .no-overflow
   overflow: hidden
+
+.ladybug
+  position: absolute
+  bottom: -355px
+  left: calc(100% - 510px)git 
+  svg
+    animation-name: rotate360
+    animation-duration: 5s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+@keyframes rotate360
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
