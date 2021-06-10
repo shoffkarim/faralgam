@@ -7,6 +7,7 @@ import BubbleCreator from './modules/bubble-hover';
 import CustomSelect from './modules/custom-select';
 import Popup from './modules/popup';
 import scrollMagic from "./modules/scrollMagicInit";
+import Seo from './modules/seo';
 import Validation from './modules/validation';
 
 if (document.querySelector(".js-bubble-hover")) {
@@ -22,9 +23,11 @@ if (document.querySelector(".js-bubble-hover")) {
   });
 }
 
+const seo = new Seo();
 const popup = new Popup();
 const select = new CustomSelect();
 const valid = new Validation();
+
 // eslint-disable-next-line no-unused-vars
 let shopsSlider = new Swiper(".shops-slider", {
   slidesPerView: 5,
@@ -65,4 +68,5 @@ const galleryBtns = document.querySelectorAll(".js-gallery-btn");
 galleryBtns.forEach((btn) => btn.addEventListener("click", function () {
   gallerySlider.slideTo(btn.dataset.id - 1);
 }));
+
 scrollMagic();
