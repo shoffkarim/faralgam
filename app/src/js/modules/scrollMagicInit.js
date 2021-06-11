@@ -12,14 +12,14 @@ function scrollMagic() {
     let scenes = [];
     let cloudAnimation1 = new TimelineMax();
     cloudAnimation1
-    .to(".gallery-column--1", 500, { x: "-=250%", ease: Power1.easeOut }, 0)
-    .to(".gallery-column--2", 500, { x: "-=250%", ease: Power1.easeOut }, 0)
-    .to(".gallery-column--4", 500, { x: "+=250%", ease: Power1.easeOut }, 0)
-    .to(".gallery-column--5", 500, { x: "+=250%", ease: Power1.easeOut }, 0)
-    .to(".gallery-main", 500, { y: "-=250%", ease: Power1.easeOut }, 0)
+    .to(".gallery-column--1", 500, { x: "-=250%", ease: Power3.easeOut, }, 0)
+    .to(".gallery-column--2", 500, { x: "-=250%", ease: Power3.easeOut }, 0)
+    .to(".gallery-column--4", 500, { x: "+=250%", ease: Power3.easeOut }, 0)
+    .to(".gallery-column--5", 500, { x: "+=250%", ease: Power3.easeOut }, 0)
+    .to(".gallery-main", 500, { y: "-=250%", ease: Power3.easeOut }, 0)
     .to(".gallery-column--3 .gallery-item", 500, {
       width: "100%",
-      ease: Circ.easeOut,
+      ease: Power3.easeOut,
     }, 0);
     // TweenMax.set(".gallery-column--3 .gallery-item", { transformOrigin: "0% 0%" });
     scenes.push(
