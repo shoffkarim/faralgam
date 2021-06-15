@@ -129,6 +129,12 @@ body
   position: absolute
   bottom: -355px
   left: calc(100% - 510px)
+  @media screen and ( max-width: 1200px )
+    transform: scale(0.8)
+  @media screen and ( max-width: 1050px )
+    transform: scale(0.5)
+  @media screen and ( max-width: 900px )
+    bottom: -250px
   svg
     animation-name: rotate360
     animation-duration: 5s
