@@ -1,0 +1,146 @@
+.default
+  .breadcrumbs
+    margin-top: 96px
+  .page-title
+    margin-top: 9px
+    h1
+      font-size: 50px
+      line-height: 62px
+    + .container-inner
+      margin-top: 68px
+  .container-inner
+    max-width: 730px
+    margin: 0 auto
+    margin-bottom: 189px
+    @media screen and ( max-width: 780px )
+      max-width: none
+      padding: 0 20px
+.wysiwyg
+  p,li,span
+    font-size: 18px
+    line-height: 30px
+    color: #1d1d1d
+  h1
+    font-size: 50px
+    line-height: 62px
+    font-weight: 600
+    text-align: center
+    color: $green
+  h2
+    font-size: 30px
+    line-height: 36px
+    font-weight: 600
+    color: $green
+    margin-top: 77px
+    margin-bottom: 31px
+  h3
+    font-size: 24px
+    line-height: 30px
+    font-weight: 600
+    color: $green
+    margin-top: 77px
+    margin-bottom: 32px
+  h4
+    font-size: 20px
+    line-height: 26px
+    font-weight: 600
+    color: $green
+    margin-top: 75px
+    margin-bottom: 29px
+  p
+    + p
+      margin-top: 29px
+    + img
+      margin-top: 37px
+    + ul
+      margin-top: 31px
+    + ol
+      margin-top: 31px
+    + .table-wrapper
+      margin-top: 38px
+  img
+    max-width: 100%
+    + p
+      margin-top: 29px
+  ul
+    + p
+      margin-top: 31px
+  ol
+    + p
+      margin-top: 31px
+  ul
+    padding-left: 23px
+    li
+      position: relative
+      &::before
+        content: ""
+        width: 6px
+        height: 6px
+        background-color: $lightgreen
+        border-radius: 50%
+        position: absolute
+        left: - 23px
+        top: calc(50% - 3px)
+  ol
+    padding-left: 23px
+    li
+      list-style-type: decimal
+      &::marker
+        color: $lightgreen
+        font-size: 16px
+        line-height: 30px
+        font-weight: 600
+  table
+    thead
+      border-left: 1px solid #B5D075
+      border-right: 1px solid #B5D075
+      tr
+        background-color: #B5D075
+      td, th
+        color: #fff
+        font-size: 16px
+        line-height: 24px
+        font-weight: 600
+        padding: 10px 24px 10px 21px
+        text-align: left
+    tbody
+      border-left: 1px solid #E9ECE6
+      border-right: 1px solid #E9ECE6
+      td
+        padding: 8px 22px
+        border-right: 1px solid #E9ECE6
+        font-size: 16px
+        line-height: 24px
+        font-weight: 400
+        color: $black
+      tr
+        td
+          &:last-child
+            border-right: none
+      tr
+        border-bottom: 1px solid #E9ECE6
+  .table-wrapper
+    + p
+      margin-top: 39px
+
+.table-dots
+  @include dfc()
+  &__row
+    @include dfr()
+    margin-bottom: 11px
+  &__spacing
+    flex-grow: 1
+    background-image: url(/app/build/img/dots.png)
+    background-repeat: repeat-x
+    background-position: bottom
+    margin-bottom: 8px
+  &__name
+    font-size: 18px
+    line-height: 30px
+    color: #1f1f1f
+    font-weight: 600
+  &__count
+    font-size: 18px
+    line-height: 30px
+    font-weight: 400
+    color: #1f1f1f
