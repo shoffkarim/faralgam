@@ -109,7 +109,8 @@
       position: absolute
       &--1
         top: 0px
-        left: 46%
+        left: 100%
+        width: 403px
         @media screen and ( max-width: 1336px )
           left: 47%
           width: 365px
@@ -118,7 +119,8 @@
           top: 10px
       &--2
         top: 233px
-        left: 58.5%
+        left: 100%
+        width: 540px
         @media screen and ( max-width: 1366px )
           top: 238px
           left: 63.5%
@@ -128,7 +130,8 @@
           top: 125px
       &--3
         top: 43px
-        left: 71.7%
+        left: 100%
+        width: 320px
         @media screen and ( max-width: 1366px )
           top: 58px
           left: 79.7%
@@ -138,13 +141,54 @@
       &--petal-1
         top: 325px
         left: calc(50% + 70px)
+        opacity: 0
       &--petal-2
         top: 380px
         right: 310px
+        opacity: 0
       &--petal-3
         bottom: 50px
         left: calc(50% - 250px)
+        opacity: 0
       img
         display: block
         width: 100%
         height: 100%
+.shops.animate
+  .shops-background__img--1
+    animation-name: shops1
+    animation-iteration-count: 1
+    animation-duration: 5s
+    animation-fill-mode: forwards
+  .shops-background__img--2
+    animation-name: shops2
+    animation-iteration-count: 1
+    animation-duration: 5s
+    animation-fill-mode: forwards
+  .shops-background__img--3
+    animation-name: shops3
+    animation-iteration-count: 1
+    animation-duration: 5s
+    animation-fill-mode: forwards
+  .shops-background__img--petal-1,
+  .shops-background__img--petal-2,
+  .shops-background__img--petal-3
+    opacity: 1
+    transition: opacity 1s 5s
+@keyframes shops1
+  0%
+    left: 100%
+  100%
+    left: 46%
+
+@keyframes shops2
+  0%
+    left: 100%
+  100%
+    left: 58.5%
+
+@keyframes shops3
+  0%
+    left: 100%
+  100%
+    left: 71.7%

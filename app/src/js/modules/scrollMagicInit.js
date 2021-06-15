@@ -43,6 +43,16 @@ function scrollMagic() {
         .setPin(".gallery-wrapper")
         .addTo(controller)
     );
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".js-shops",
+        duration: "300%",
+        triggerHook: 0.8,
+        offset: 0,
+      })
+        .setClassToggle(".js-shops", "animate")
+        .addTo(controller)
+    );
   }
 }
 
