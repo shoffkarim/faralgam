@@ -1,0 +1,63 @@
+section.section.card
+  .container
+    .card-container
+      .card-img
+        .card-slider.swiper-container
+          .swiper-wrapper
+            .card-slide.swiper-slide
+              img(src="img/card/tomatos.png", alt="alt")
+            .card-slide.swiper-slide
+              img(src="img/card/tomatos.png", alt="alt")
+            .card-slide.swiper-slide
+              img(src="img/card/tomatos.png", alt="alt")
+          .card-slider-btn.card-slider-btn--prev
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" fill="#F4F5F3"/>
+              <path d="M17.5002 12.4998L25.0004 20L17.5002 27.5002" stroke="#567B00" stroke-width="1.5"/>
+            </svg>
+          .card-slider-btn.card-slider-btn--next
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="20" fill="#F4F5F3"/>
+              <path d="M17.5002 12.4998L25.0004 20L17.5002 27.5002" stroke="#567B00" stroke-width="1.5"/>
+            </svg>
+        .card-thumb.swiper-container(thumbsSlider="")
+          .swiper-wrapper
+            .card-thumb-slide.swiper-slide
+              img(src="img/card/tomatos-1.png", alt="alt")
+            .card-thumb-slide.swiper-slide
+              img(src="img/card/tomatos-2.png", alt="alt")
+            .card-thumb-slide.swiper-slide
+              img(src="img/card/tomatos-3.png", alt="alt")
+
+      .card-wrapper
+        .breadcrumbs
+          ul.breadcrumbs-list
+            li.breadcrumbs-item
+              a(href="") Главная
+            li.breadcrumbs-item
+              a(href="") Продукция
+            li.breadcrumbs-item
+              a(href="") Соленья
+            li.breadcrumbs-item
+              a(href="") Томаты
+        p.card-name Томаты солёные красные, 1&nbsp;кг
+        .card-btns
+          button.btn.btn--green Заказать
+          a(href="").btn.btn--white Где купить
+        .card-info
+          .wysiwyg
+            h3 Состав
+            p Томаты красные, вода питьевая, соль поваренная пищевая, чеснок, перец стручковый острый, регулятор кислотности лимонная кислота, лавровый лист, консервант сорбат калия.
+            h3 Пищевая ценность на 100 г
+        ul.card-comp
+          li.card-comp__item
+            p.card-comp__green 15 кКал
+            p.card-comp__text Калорийность
+          li.card-comp__item
+            p.card-comp__green 3 г
+            p.card-comp__text Углеводы
+          li.card-comp__item
+            p.card-comp__green 3 г
+            p.card-comp__text Белки
+
+

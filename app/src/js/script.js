@@ -69,4 +69,22 @@ galleryBtns.forEach((btn) => btn.addEventListener("click", function () {
   gallerySlider.slideTo(btn.dataset.id - 1);
 }));
 
+let cardThumbSlider = new Swiper(".card-thumb", {
+  slidesPerView: 1,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+
+let cardSlider = new Swiper(".card-slider", {
+  slidesPerView: 1,
+  loop: false,
+  thumbs: {
+    swiper: cardThumbSlider,
+  },
+  // navigation: {
+  //   nextEl: ".shops-slider-next",
+  //   prevEl: ".shops-slider-prev",
+  // },
+});
+
 scrollMagic();
