@@ -72,3 +72,103 @@
   .link--download
     @include dfr()
     justify-content: center
+
+.catalog-inner
+  &__top
+    @include dfr()
+    .breadcrumbs
+      margin: 0
+      padding: 0
+    .breadcrumbs-list
+      justify-content: flex-start
+  &__wrapper
+    @include dfc()
+    max-width: 560px
+    margin-top: 130px
+  &__title
+    font-size: 72px
+    line-height: 80px
+    font-weight: 600
+    color: $green
+    margin-bottom: 50px
+    margin-top: 6px
+  &__desc
+    margin-bottom: 60px
+    font-size: 18px
+    line-height: 28px
+  &__list
+    @include dfr()
+    justify-content: flex-start
+    flex-wrap: wrap
+    margin-top: 47px
+    .catalog-item__img
+      animation: none
+  &__item
+    width: calc(100% / 4 - 45px)
+    margin-right: auto
+    margin-bottom: 70px
+    &:nth-child(4n)
+      margin-right: 0px
+  &__name
+    font-size: 18px
+    line-height: 26px
+    font-weight: 600
+    color: $black
+    padding-left: 30px
+    margin-top: 77px
+    transition: all 0.4s
+  &__img
+    flex-grow: 1
+    img
+      display: block
+      margin-left: auto
+  &__href
+    @include dfc()
+    padding-top: 183px
+    position: relative
+    &:hover
+      .catalog-item__wrapper
+        background-color: #B5D075
+        border-color: #B5D075
+        transition: all 0.4s
+        &::before
+          background-color: #84BD00
+          transition: all 0.4s
+      .catalog-inner__name
+        color: #fff
+        transition: all 0.4s
+
+.catalog-item
+  &__wrapper
+    border: 1px solid #E9ECE6
+    height: 169px
+    overflow: hidden
+    position: relative
+    z-index: 1
+    transition: all 0.4s
+    &::before
+      content: ""
+      width: 100px
+      height: 100px
+      border-radius: 50%
+      background-color: #E9ECE6
+      position: absolute
+      bottom: -52px
+      right: -50px
+      transition: all 0.4s
+    &::after
+      content: ""
+      width: 11px
+      height: 18px
+      background-image: url(/app/build/img/catalog-arrow.png)
+      background-repeat: no-repeat
+      background-size: contain
+      position: absolute
+      bottom: 8px
+      right: 14px
+  &__img
+    height: 250px
+    position: absolute
+    top: 0
+    left: calc(50% - 125px)
+    z-index: 2
