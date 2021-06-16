@@ -28,6 +28,10 @@
         position: absolute
         left: 50%
         transform: translate(-50%, 0)
+        @media screen and ( max-width: 1200px )
+          width: 100%
+          left: 0%
+          transform: none
         &__img
           width: 100%
           height: 100%
@@ -37,8 +41,15 @@
             object-fit: cover
     &--2
       margin-right: 220px
+      @media screen and ( max-width: 1600px )
+        margin-right: 180px
     &--4
       margin-left: 220px
+      @media screen and ( max-width: 1600px )
+        margin-left: 180px
+    &--1, &--2, &--4, &--5
+      @media screen and ( max-width: 1200px )
+        display: none
   &-item
     position: relative
     overflow: hidden
@@ -56,6 +67,13 @@
       width: 100%
       padding: 0 24px
       z-index: 11
+      @media screen and ( max-width: 1400px )
+        font-size: 18px
+        line-height: 24px
+      @media screen and ( max-width: 1300px )
+        padding: 0 15px
+        font-size: 16px
+        line-height: 22px
   &-popup-slider
     width: 100%
     height: 100%
@@ -64,12 +82,16 @@
     width: calc(100% + 17px)
     height: 100%
     @include dfr()
+    @media screen and ( max-width: 1300px )
+      flex-direction: column
     &__img
       position: relative
       top: 0
       left: 0
       width: 100%
       height: 100%
+      @media screen and ( max-width: 1300px )
+        height: 50%
       img
         width: 100%
         height: 100%
@@ -81,6 +103,11 @@
       @include dfc()
       align-items: center
       justify-content: center
+      @media screen and ( max-width: 1300px )
+        height: 50%
+        width: 100%
+      @media screen and ( max-width: 500px )
+        padding: 20px 20px 80px
     &__title
       font-size: 30px
       line-height: 36px
@@ -89,6 +116,9 @@
       text-align: center
       max-width: 480px
       margin-bottom: 30px
+      @media screen and ( max-width: 767px )
+        font-size: 22px
+        line-height: 28px
     &__text
       font-size: 18px
       line-height: 30px
@@ -96,14 +126,21 @@
       text-align: center
       color: #fff
       max-width: 480px
+      @media screen and ( max-width: 767px )
+        font-size: 16px
+        line-height: 24px
   &-slider
     &-button
       top: 20px
     &-next
       right: 0
+      @media screen and ( max-width: 500px )
+        right: calc(50% - 45px)
     &-prev
       right: 52px
       transform: rotate(180deg)
+      @media screen and ( max-width: 500px )
+        right: calc(50% + 15px)
     &-navigation
       position: absolute
       width: 31%
@@ -111,6 +148,16 @@
       bottom: 260px
       right: 64px
       z-index: 2
+      @media screen and ( max-width: 1300px )
+        width: 410px
+        bottom: 80px
+        right: auto
+        left: calc( 50% - 205px )
+      @media screen and ( max-width: 500px )
+        width: 100%
+        padding: 0 20px
+        left: 0px
+        border-top: 0
   &-pagination
     position: absolute
     z-index: 2
@@ -119,12 +166,18 @@
     line-height: 20px
     font-weight: 600
     bottom: -45px
+    @media screen and ( max-width: 500px )
+      display: none
   &-main
     position: absolute
     top: 100%
     left: calc(50% - 255px)
     @include dfc()
     align-items: center
+    @media screen and ( max-width: 1200px )
+      top: 38%
+    @media screen and ( max-width: 500px )
+      left: calc(50% - 150px)
     &__text
       font-size: 50px
       line-height: 62px
@@ -133,6 +186,13 @@
       text-align: center
       max-width: 510px
       margin-bottom: 30px
+      @media screen and ( max-width: 767px )
+        font-size: 38px
+        line-height: 50px
+      @media screen and ( max-width: 500px )
+        font-size: 28px
+        line-height: 40px
+        max-width: 300px
     &__button
       cursor: pointer
       transition: all 0.4s

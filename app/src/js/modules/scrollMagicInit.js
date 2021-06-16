@@ -4,7 +4,7 @@
 
 function scrollMagic() {
   if (
-    document.documentElement.clientWidth > 767 && document.querySelector(".js-gallery")
+    document.documentElement.clientWidth > 1200 && document.querySelector(".js-gallery")
   ) {
     let controller = new ScrollMagic.Controller({
       loglevel: 0,
@@ -12,14 +12,14 @@ function scrollMagic() {
     let scenes = [];
     let cloudAnimation1 = new TimelineMax();
     cloudAnimation1
-    .to(".gallery-column--1", 500, { x: "-=250%", ease: Power3.easeOut, }, 0)
-    .to(".gallery-column--2", 500, { x: "-=250%", ease: Power3.easeOut }, 0)
-    .to(".gallery-column--4", 500, { x: "+=250%", ease: Power3.easeOut }, 0)
-    .to(".gallery-column--5", 500, { x: "+=250%", ease: Power3.easeOut }, 0)
-    .to(".gallery-main", 500, { y: "-=250%", ease: Power3.easeOut }, 0)
+    .to(".gallery-column--1", 500, { x: "-=250%", ease: Power2.easeOut }, 0)
+    .to(".gallery-column--2", 500, { x: "-=250%", ease: Power2.easeOut }, 0)
+    .to(".gallery-column--4", 500, { x: "+=250%", ease: Power2.easeOut }, 0)
+    .to(".gallery-column--5", 500, { x: "+=250%", ease: Power2.easeOut }, 0)
+    .to(".gallery-main", 500, { y: "-=250%", ease: Power2.easeOut }, 0)
     .to(".gallery-column--3 .gallery-item", 500, {
       width: "100%",
-      ease: Power3.easeOut,
+      ease: Power2.easeOut,
     }, 0);
     // TweenMax.set(".gallery-column--3 .gallery-item", { transformOrigin: "0% 0%" });
     scenes.push(
@@ -41,6 +41,16 @@ function scrollMagic() {
         offset: 0,
       })
         .setPin(".gallery-wrapper")
+        .addTo(controller)
+    );
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".js-shops",
+        duration: "300%",
+        triggerHook: 0.8,
+        offset: 0,
+      })
+        .setClassToggle(".js-shops", "animate")
         .addTo(controller)
     );
   }

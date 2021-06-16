@@ -13,6 +13,9 @@
     color: $black
     padding: 10px 16px
     border: 1px solid transparent
+    @media screen and ( max-width: 500px )
+      font-size: 14px
+      line-height: 22px
     &.error
       border-color: #E05B63
       + .error-message
@@ -136,6 +139,9 @@
     padding: 10px 16px
     position: relative
     cursor: pointer
+    @media screen and ( max-width: 500px )
+      font-size: 14px
+      line-height: 22px
     &::before
       content: ""
       width: 12px
@@ -189,6 +195,9 @@
     padding: 13px 0px
     border-bottom: 1px solid #E9ECE6
     cursor: pointer
+    @media screen and ( max-width: 500px )
+      font-size: 14px
+      line-height: 22px
     &:hover
       color: $lightgreen
     &:last-child
