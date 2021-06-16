@@ -81,10 +81,10 @@ let cardSlider = new Swiper(".card-slider", {
   thumbs: {
     swiper: cardThumbSlider,
   },
-  // navigation: {
-  //   nextEl: ".shops-slider-next",
-  //   prevEl: ".shops-slider-prev",
-  // },
+  navigation: {
+    nextEl: ".card-slider-btn--next",
+    prevEl: ".card-slider-btn--prev",
+  },
 });
 
 scrollMagic();

@@ -1,5 +1,7 @@
 .card
   margin-top: 92px
+  @media screen and ( max-width: 1366px )
+    margin-top: 22px
   .breadcrumbs
     padding: 0
     margin: 0
@@ -9,11 +11,23 @@
     @include dfr()
     justify-content: space-between
     margin-bottom: 156px
+    @media screen and ( max-width: 1366px )
+      margin-bottom: 56px
+    @media screen and ( max-width: 900px )
+      flex-direction: column-reverse
   &-img
     width: calc(50% - 30px)
+    @media screen and ( max-width: 1366px )
+      width: calc(50% - 20px)
+    @media screen and ( max-width: 900px )
+      width: 100%
   &-wrapper
     width: calc(50% - 30px)
     padding-bottom: 44px
+    @media screen and ( max-width: 1366px )
+      width: calc(50% - 20px)
+    @media screen and ( max-width: 900px )
+      width: 100%
   &-name
     font-size: 50px
     line-height: 62px
@@ -21,9 +35,6 @@
     color: $green
     margin-bottom: 48px
     margin-top: 7px
-    @media screen and ( max-width: 1366px )
-      font-size: 40px
-      line-height: 46px
     @media screen and ( max-width: 1000px )
       font-size: 35px
       line-height: 42px
@@ -35,15 +46,29 @@
       line-height: 34px
   &-btns
     @include dfr()
+    @media screen and ( max-width: 500px )
+      flex-direction: column
     .btn
       padding: 15px 93px 14px
       margin-right: 13px
+      @media screen and ( max-width: 1200px )
+        padding: 15px 50px 14px
       &--white
         padding: 15px 87px 14px
+        text-align: center
+        line-height: 18px
+        @media screen and ( max-width: 1200px )
+          padding: 15px 50px 14px
+        @media screen and ( max-width: 500px )
+          margin-top: 10px
   &-info
+    @media screen and ( max-width: 1366px )
+      max-width: 435px
     p
       line-height: 27px
       color: #000
+      @media screen and ( max-width: 1366px )
+        line-height: 25px
     h3
       margin-top: 63px
   &-comp
@@ -59,17 +84,30 @@
       line-height: 29px
       font-weight: 600
       color: $green
+      @media screen and ( max-width: 767px )
+        font-size: 22px
+        line-height: 26px
+      @media screen and ( max-width: 500px )
+        font-size: 20px
+        line-height: 24px
     &__text
       font-size: 18px
       line-height: 24px
       color: #000
       font-weight: 400
       margin-top: 5px
+      @media screen and ( max-width: 1366px )
+        font-size: 16px
+        line-height: 21px
   &-img
     display: flex
     flex-direction: row-reverse
     justify-content: space-between
     margin-top: 15px
+    @media screen and ( max-width: 1366px )
+      padding-bottom: 140px
+    @media screen and ( max-width: 500px )
+      padding-bottom: 50px
   &-thumb
     width: 63px
     .swiper-wrapper
@@ -83,6 +121,7 @@
       justify-content: center
       border: 1px solid #E9ECE6
       border-bottom: none
+      cursor: pointer
       &.swiper-slide-thumb-active
         border-color: $lightgreen
         + .card-thumb-slide
@@ -96,6 +135,33 @@
     &-btn
       position: absolute
       bottom: 0
+      z-index: 2
+      cursor: pointer
+      @media screen and ( max-width: 500px )
+        display: none
+      &:hover
+        circle
+          fill: $lightgreen
+          transition: all 0.4s
+        path
+          stroke: #fff
+          transition: all 0.4s
+      &.swiper-button-disabled
+        cursor: default
+        opacity: 0.4
+        pointer-events: none
+      svg
+        width: 40px
+        height: 40px
+        @media screen and ( max-width: 1366px )
+          width: 32px
+          height: 32px
+        circle
+          fill: #F4F5F3
+          transition: all 0.4s
+        path
+          stroke: #567B00
+          transition: all 0.4s
       &--next
         right: 6px
       &--prev
@@ -105,6 +171,8 @@
   &-slide
     @include dfr()
     align-items: center
+    img
+      width: 100%
 
 .card-information
   background-color: #E05B63
@@ -112,32 +180,63 @@
     max-width: 912px
     margin: 0 auto
     padding: 143px 0px 140px
+    @media screen and ( max-width: 1366px )
+      max-width: 807px
+      padding: 101px 0px 99px
+    @media screen and ( max-width: 900px )
+      max-width: none
+      width: 100%
+      padding: 101px 20px 99px
   &__title
     font-size: 24px
     line-height: 30px
     color: #fff
     font-weight: 600
     margin-bottom: 36px
+    @media screen and ( max-width: 767px )
+      font-size: 22px
+      line-height: 26px
+    @media screen and ( max-width: 500px )
+      font-size: 20px
+      line-height: 24px
   &__list
     @include dfr()
     flex-wrap: wrap
     justify-content: space-between
+    @media screen and ( max-width: 600px )
+      flex-direction: column
   &__item
     width: calc(50% - 30px)
+    @media screen and ( max-width: 1366px )
+      width: calc(50% - 27px)
+    @media screen and ( max-width: 900px )
+      width: calc(50% - 15px)
+    @media screen and ( max-width: 600px )
+      width: 100%
 .information-item
   padding: 19px 0px 18px
   border-bottom: 1px solid #fff
+  @media screen and ( max-width: 1366px )
+    padding: 18px 0px
   &:first-child
     border-top: 1px solid #fff
   &:nth-child(2)
     border-top: 1px solid #fff
+    @media screen and ( max-width: 600px )
+      border-top: none
   &__name
     font-size: 18px
     line-height: 26px
     color: #fff
     font-weight: 600
+    @media screen and ( max-width: 1366px )
+      font-size: 16px
+      line-height: 24px
   &__desc
     font-size: 18px
     line-height: 26px
     color: #fff
     font-weight: 400
+    @media screen and ( max-width: 1366px )
+      font-size: 16px
+      line-height: 24px
