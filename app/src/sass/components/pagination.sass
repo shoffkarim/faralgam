@@ -3,8 +3,12 @@
   justify-content: center
   padding: 0 20px
   margin-bottom: 197px
+  @media screen and ( max-width: 1366px )
+    margin-bottom: 155px
   &-item
     margin-right: 14px
+    @media screen and ( max-width: 1366px )
+      margin-right: 8px
     a
       width: 40px
       height: 40px
@@ -19,6 +23,12 @@
       align-items: center
       transition: all 0.4s
       font-weight: 600
+      @media screen and ( max-width: 1366px )
+        width: 32px
+        height: 32px
+      @media screen and ( max-width: 500px )
+        width: 25px
+        height: 25px
       &:hover
         background-color: $lightgreen
         color: #fff
@@ -33,12 +43,33 @@
     color: $green
     @include dfr()
     align-items: flex-end
-    margin-right: 32px
+    margin-right: 21px
+    @media screen and ( max-width: 1366px )
+      margin-right: 19px
+      margin-left: 16px
+      line-height: 36px
+    @media screen and ( max-width: 500px )
+      margin-right: 16px
+      margin-left: 4px
   &-btn
+    @include dfr()
+    align-items: flex-start
+    svg
+      @media screen and ( max-width: 1366px )
+        width: 32px
+        height: 32px
+      @media screen and ( max-width: 500px )
+        width: 25px
+        height: 25px
     &__prev
-      transform: rotate(180deg)
       margin-right: 20px
+      @media screen and ( max-width: 500px )
+        margin-right: 10px
+      svg
+        transform: rotate(180deg)
     &__next
       margin-left: 20px
+      @media screen and ( max-width: 500px )
+        margin-left: 10px
     &--disabled
       display: none
