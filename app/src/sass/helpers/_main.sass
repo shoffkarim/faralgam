@@ -74,7 +74,18 @@ body
       &:hover
         color: $lightgreen
         transition: all 0.4s
-
+  &-img
+    position: absolute
+    top: 0
+    right: 0px
+    @media screen and ( max-width: 1200px )
+      display: none
+  &-left
+    max-width: 700px
+    @media screen and ( max-width: 1366px )
+      max-width: 485px
+    @media screen and ( max-width: 1200px )
+      max-width: none
 .delimeter-img
   text-align: center
   img
