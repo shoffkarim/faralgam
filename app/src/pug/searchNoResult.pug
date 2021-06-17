@@ -1,0 +1,20 @@
+doctype html
+html
+  head(lang="ru")
+    include includes/__head
+  body
+    include components/header
+    .main
+      .breadcrumbs
+        ul.breadcrumbs-list
+          li.breadcrumbs-item
+            a(href="") Главная
+          li.breadcrumbs-item
+            a(href="") Поиск
+      .page-title
+        h1 Результаты поиска
+      include sections/searchNoResult
+    include components/footer
+    include sections/galleryPopup
+    include sections/callbackPopup
+    include includes/__scripts
