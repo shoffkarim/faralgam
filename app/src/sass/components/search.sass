@@ -75,3 +75,19 @@
     @media screen and ( max-width: 500px )
       font-size: 14px
       line-height: 22px
+  &-wrapper
+    height: 100%
+    background-color: #B5D075
+    @include dfr()
+    align-items: center
+    justify-content: center
+    .search
+      position: relative
+      z-index: 2
+      &-input
+        max-width: 585px
+  &-background
+    position: absolute
+    bottom: 0px
+    right: 0px
+    z-index: 1
