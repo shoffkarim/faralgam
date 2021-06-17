@@ -1,0 +1,16 @@
+doctype html
+html
+  head(lang="ru")
+    include includes/__head
+  body
+    include components/header
+    .main
+      include components/breadcrumbs
+      .page-title
+        h1 Пресс-центр
+      include sections/news-page
+    include components/footer
+    include sections/galleryPopup
+    include sections/callbackPopup
+    include sections/searchPopup
+    include includes/__scripts
