@@ -109,7 +109,12 @@
     @media screen and ( max-width: 500px )
       padding-bottom: 50px
   &-thumb
-    width: 63px
+    width: 95px
+    @include dfc()
+    align-items: center
+    padding-top: 15px
+    @media screen and ( max-width: 500px )
+      width: 63px
     .swiper-wrapper
       flex-direction: column
       width: 63px
@@ -122,14 +127,27 @@
       border: 1px solid #E9ECE6
       border-bottom: none
       cursor: pointer
+      box-shadow: 0px 0px 21px rgba(51, 72, 0, 0)
+      transition: box-shadow 0.4s
       &.swiper-slide-thumb-active
         border-color: $lightgreen
         + .card-thumb-slide
           border-top-color: $lightgreen
+        &:hover
+          + .card-thumb-slide
+            border-top-color: #E9ECE6
       &:last-child
         border-bottom: 1px solid #E9ECE6
         &.swiper-slide-thumb-active
           border-color: $lightgreen
+      &:hover
+        transition: box-shadow 0.4s
+        border: 1px solid rgba(233, 236, 230, 0)
+        box-shadow: 0px 0px 21px rgba(51, 72, 0, 0.2)
+        z-index: 2
+        @media screen and ( max-width: 500px )
+          box-shadow:  0px 0px 21px rgba(51, 72, 0, 0)
+          border: 1px solid #E9ECE6
   &-slider
     width: calc(100% - 98px)
     &-btn
