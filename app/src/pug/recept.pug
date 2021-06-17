@@ -1,0 +1,21 @@
+doctype html
+html
+  head(lang="ru")
+    include includes/__head
+  body.default
+    include components/header
+    .main
+      .banner
+        .banner-img
+          img(src="img/news/recept.jpg", alt="alt")
+        include components/breadcrumbs
+        .page-title
+          h1 Холодный корейский суп
+        .news-tag Рецепт
+      include sections/recept
+    include components/footer
+    include sections/galleryPopup
+    include sections/callbackPopup
+    include sections/searchPopup
+    include includes/__scripts
+
