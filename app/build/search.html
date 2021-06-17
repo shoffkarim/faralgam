@@ -235,9 +235,9 @@
       </div>
       <section class="section search-result">
         <form class="search" action="" method="method">
-          <div class="search-input">
-            <input type="text">
-            <div class="search-del js-search-del"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="search-input js-search">
+            <input type="text" placeholder="Поиск по каталогу">
+            <div class="search-del hidden js-search-del"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.2">
 <path d="M14.0058 2L2 14.0058" stroke="#567B00" stroke-width="1.5" stroke-miterlimit="10"/>
 <path d="M2 2L14.0058 14.0058" stroke="#567B00" stroke-width="1.5" stroke-miterlimit="10"/>
@@ -528,6 +528,36 @@
               </div>
             </div>
           </form>
+        </div>
+      </div>
+      <div class="popup-close">
+        <button><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 1L1 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+<path d="M1 1L25 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+</svg>
+        </button>
+      </div>
+    </div>
+    <div class="popup popup-search js-popup" data-popup="search">
+      <div class="popup-overlay"></div>
+      <div class="popup-container">
+        <div class="search-wrapper">
+          <form class="search" action="" method="method">
+            <div class="search-input js-search">
+              <input type="text" placeholder="Поиск по каталогу">
+              <div class="search-del hidden js-search-del"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<path d="M14.0058 2L2 14.0058" stroke="#567B00" stroke-width="1.5" stroke-miterlimit="10"/>
+<path d="M2 2L14.0058 14.0058" stroke="#567B00" stroke-width="1.5" stroke-miterlimit="10"/>
+</g>
+</svg>
+              </div>
+            </div>
+            <div class="search-button">
+              <button type="submit">Найти</button>
+            </div>
+          </form>
+          <div class="search-background"><img src="img/background-flower.svg" alt="alt"></div>
         </div>
       </div>
       <div class="popup-close">

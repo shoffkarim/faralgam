@@ -7,6 +7,7 @@ import BubbleCreator from './modules/bubble-hover';
 import CustomSelect from './modules/custom-select';
 import Popup from './modules/popup';
 import scrollMagic from "./modules/scrollMagicInit";
+import Search from './modules/search';
 import Seo from './modules/seo';
 import Validation from './modules/validation';
 
@@ -27,6 +28,7 @@ const seo = new Seo();
 const popup = new Popup();
 const select = new CustomSelect();
 const valid = new Validation();
+const search = new Search();
 
 let shopsSlider = new Swiper(".shops-slider", {
   slidesPerView: 5,
