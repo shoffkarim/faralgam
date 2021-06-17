@@ -275,7 +275,7 @@
           </div>
         </div>
         <div class="vacancy-button">
-          <button class="btn btn--green">Откликнуться</button>
+          <button class="btn btn--green js-popup-open" data-popup="vacancy">Откликнуться</button>
         </div>
       </section>
     </div>
@@ -445,6 +445,126 @@
               <div class="form-agree">
                 <label class="fake-checkbox" for="checkbox1">
                   <input class="js-valid" type="checkbox" name="" id="checkbox1">
+                  <div class="fake-checkbox__box"></div>
+                  <p>Даю согласие на обработку <a href="">персональных данных</a></p>
+                </label>
+              </div>
+              <div class="form-button">
+                <button class="btn js-submit">Отправить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="popup-close">
+        <button><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 1L1 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+<path d="M1 1L25 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+</svg>
+        </button>
+      </div>
+    </div>
+    <div class="popup popup-vacancy js-popup" data-popup="vacancy">
+      <div class="popup-overlay"></div>
+      <div class="popup-container">
+        <div class="vacancy-wrapper">
+          <p class="vacancy-title">Откликнуться на вакансию</p>
+          <p class="vacancy-desc">Пожалуйста, заполните форму и наши менеджеры свяжутся с вами в ближайшее время. *&nbsp;—&nbsp;поля&nbsp;обязательны&nbsp;для&nbsp;заполнения.</p>
+          <form class="form vacancy-form js-form" action="" method="method">
+            <div class="form-block">
+              <label class="form-label" for="">ФИО*</label>
+              <input class="form-input js-valid" type="text">
+              <div class="error-message">Поле незаполнено или заполнено неверно</div>
+            </div>
+            <div class="form-block">
+              <label class="form-label" for="">Телефон*</label>
+              <input class="form-input js-valid" type="tel">
+              <div class="error-message">Поле незаполнено или заполнено неверно</div>
+            </div>
+            <div class="form-block">
+              <label class="form-label" for="">Email*</label>
+              <input class="form-input js-valid" type="email">
+              <div class="error-message">Поле незаполнено или заполнено неверно</div>
+            </div>
+            <div class="form-block">
+              <label class="form-label" for="">Гражданство</label>
+              <input class="form-input js-valid" type="text">
+              <div class="error-message">Поле незаполнено или заполнено неверно</div>
+            </div>
+            <div class="form-block">
+              <label class="form-label">Ваш пол</label>
+              <div class="fake-radio__wrapper">
+                <label class="fake-radio">
+                  <input type="radio" name="radio1">
+                  <div class="fake-radio__box"></div>
+                  <p>Женский</p>
+                </label>
+                <label class="fake-radio">
+                  <input type="radio" name="radio1">
+                  <div class="fake-radio__box"></div>
+                  <p>Мужской</p>
+                </label>
+              </div>
+            </div>
+            <div class="form-block">
+              <label class="form-label" for="">Город проживания*</label>
+              <input class="form-input js-valid" type="text">
+              <div class="error-message">Поле незаполнено или заполнено неверно</div>
+            </div>
+            <div class="form-block">
+              <label class="form-label">Образование</label>
+              <div class="fake-radio__wrapper">
+                <label class="fake-radio">
+                  <input type="radio" name="radio2">
+                  <div class="fake-radio__box"></div>
+                  <p>Высшее</p>
+                </label>
+                <label class="fake-radio">
+                  <input type="radio" name="radio2">
+                  <div class="fake-radio__box"></div>
+                  <p>Средне-специальное</p>
+                </label>
+                <label class="fake-radio">
+                  <input type="radio" name="radio2">
+                  <div class="fake-radio__box"></div>
+                  <p>Не имеет значения</p>
+                </label>
+              </div>
+            </div>
+            <div class="form-block">
+              <label class="form-label">Наличие водительских прав</label>
+              <div class="fake-radio__wrapper">
+                <label class="fake-radio">
+                  <input type="radio" name="radio3">
+                  <div class="fake-radio__box"></div>
+                  <p>Да</p>
+                </label>
+                <label class="fake-radio">
+                  <input type="radio" name="radio3">
+                  <div class="fake-radio__box"></div>
+                  <p>Нет</p>
+                </label>
+              </div>
+            </div>
+            <div class="form-block">
+              <label class="form-label">Наличие личного автомобиля</label>
+              <div class="fake-radio__wrapper">
+                <label class="fake-radio">
+                  <input type="radio" name="radio4">
+                  <div class="fake-radio__box"></div>
+                  <p>Да</p>
+                </label>
+                <label class="fake-radio">
+                  <input type="radio" name="radio4">
+                  <div class="fake-radio__box"></div>
+                  <p>Нет</p>
+                </label>
+              </div>
+            </div>
+            <div class="form-bottom">
+              <div class="form-agree">
+                <label class="fake-checkbox" for="checkbox2">
+                  <input class="js-valid" type="checkbox" name="" id="checkbox2">
                   <div class="fake-checkbox__box"></div>
                   <p>Даю согласие на обработку <a href="">персональных данных</a></p>
                 </label>

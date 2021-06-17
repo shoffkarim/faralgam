@@ -34,7 +34,7 @@
   &-label
     font-size: 14px
     line-height: 28px
-    font-weight: 500
+    font-weight: 600
     color: #fff
   &-button
     width: 100%
@@ -209,5 +209,47 @@
       left: 0
       width: 100%
       height: 100%
-      background-color: transparent
+      background-color: transparenth
       z-index: 99
+
+.fake-radio
+  @include dfr()
+  align-items: center
+  margin-right: 20px
+  margin-bottom: 8px
+  cursor: pointer
+  &__wrapper
+    @include dfr()
+    flex-wrap: wrap
+    max-width: 350px
+    margin-top: 6px
+  input
+    display: none
+    &:checked
+      + .fake-radio__box
+        background-color: $green
+        transition: all 0.4s
+  &__box
+    min-width: 22px
+    min-height: 22px
+    width: 22px
+    height: 22px
+    background-color: #fff
+    margin-right: 8px
+    border-radius: 50%
+    position: relative
+    transition: all 0.4s
+    &::before
+      content: ""
+      width: 8px
+      height: 8px
+      position: absolute
+      top: calc(50% - 4px)
+      left: calc(50% - 4px)
+      background-color: #fff
+      border-radius: 50%
+  p
+    font-size: 14px
+    line-height: 28px
+    font-weight: 400
+    color: #fff

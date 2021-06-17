@@ -1,0 +1,86 @@
+.popup.popup-vacancy.js-popup(data-popup="vacancy")
+  .popup-overlay
+  .popup-container
+    .vacancy-wrapper
+      p.vacancy-title Откликнуться на вакансию
+      p.vacancy-desc Пожалуйста, заполните форму и наши менеджеры свяжутся с вами в ближайшее время. *&nbsp;—&nbsp;поля&nbsp;обязательны&nbsp;для&nbsp;заполнения.
+      form.form.vacancy-form.js-form(action="" method="method")
+        .form-block
+          label.form-label(for="") ФИО*
+          input.form-input.js-valid(type="text")
+          .error-message Поле незаполнено или заполнено неверно
+        .form-block
+          label.form-label(for="") Телефон*
+          input.form-input.js-valid(type="tel")
+          .error-message Поле незаполнено или заполнено неверно
+        .form-block
+          label.form-label(for="") Email*
+          input.form-input.js-valid(type="email")
+          .error-message Поле незаполнено или заполнено неверно
+        .form-block
+          label.form-label(for="") Гражданство
+          input.form-input.js-valid(type="text")
+          .error-message Поле незаполнено или заполнено неверно
+        .form-block
+          label.form-label Ваш пол
+          .fake-radio__wrapper
+            label.fake-radio
+              input(type="radio", name="radio1")
+              .fake-radio__box
+              p Женский
+            label.fake-radio
+              input(type="radio", name="radio1")
+              .fake-radio__box
+              p Мужской
+        .form-block
+          label.form-label(for="") Город проживания*
+          input.form-input.js-valid(type="text")
+          .error-message Поле незаполнено или заполнено неверно
+        .form-block
+          label.form-label Образование
+          .fake-radio__wrapper
+            label.fake-radio
+              input(type="radio", name="radio2")
+              .fake-radio__box
+              p Высшее
+            label.fake-radio
+              input(type="radio", name="radio2")
+              .fake-radio__box
+              p Средне-специальное
+            label.fake-radio
+              input(type="radio", name="radio2")
+              .fake-radio__box
+              p Не имеет значения
+        .form-block
+          label.form-label Наличие водительских прав
+          .fake-radio__wrapper
+            label.fake-radio
+              input(type="radio", name="radio3")
+              .fake-radio__box
+              p Да
+            label.fake-radio
+              input(type="radio", name="radio3")
+              .fake-radio__box
+              p Нет
+        .form-block
+          label.form-label Наличие личного автомобиля
+          .fake-radio__wrapper
+            label.fake-radio
+              input(type="radio", name="radio4")
+              .fake-radio__box
+              p Да
+            label.fake-radio
+              input(type="radio", name="radio4")
+              .fake-radio__box
+              p Нет
+        .form-bottom
+          .form-agree
+            label.fake-checkbox(for="checkbox2")
+              input.js-valid(type="checkbox", name="" id="checkbox2")
+              .fake-checkbox__box
+              p Даю согласие на обработку <a href="">персональных данных</a>
+          .form-button
+            button.btn.js-submit Отправить
+  .popup-close
+    button
+      include ../blocks/closeBtn.pug
