@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-undef */
-// STYLES=============================================================================
+
 import '../sass/style.sass';
 import BubbleCreator from './modules/bubble-hover';
 import CustomSelect from './modules/custom-select';
@@ -13,13 +13,13 @@ import Validation from './modules/validation';
 if (document.querySelector(".js-bubble-hover")) {
   let bubbleCreators = [];
   document.querySelectorAll(".js-bubble-hover").forEach(function (item) {
-      bubbleCreators.push(new BubbleCreator(item));
+    bubbleCreators.push(new BubbleCreator(item));
   });
 
   window.addEventListener("resize", function () {
-      bubbleCreators.forEach(function (item) {
-          item.calcBubbleSize();
-      });
+    bubbleCreators.forEach(function (item) {
+      item.calcBubbleSize();
+    });
   });
 }
 
@@ -28,7 +28,6 @@ const popup = new Popup();
 const select = new CustomSelect();
 const valid = new Validation();
 
-// eslint-disable-next-line no-unused-vars
 let shopsSlider = new Swiper(".shops-slider", {
   slidesPerView: 5,
   spaceBetween: 35,

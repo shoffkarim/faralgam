@@ -1,0 +1,67 @@
+.search
+  @include dfr()
+  justify-content: center
+  width: 100%
+  padding: 0 20px
+  @media screen and ( max-width: 600px )
+    flex-direction: column
+    align-items: flex-end
+  &-result
+    margin-top: 72px
+    .search
+      margin-bottom: 70px
+  &-input
+    position: relative
+    max-width: 523px
+    width: 100%
+    margin-right: 8px
+    @media screen and ( max-width: 950px )
+      max-width: 400px
+    @media screen and ( max-width: 600px )
+      max-width: none
+      margin-right: 0px
+      margin-bottom: 10px
+    input
+      width: 100%
+      border: 1px solid #E9E9E9
+      background-color: #F8F8F8
+      font-size: 18px
+      line-height: 30px
+      color: $black
+      font-weight: 400
+      padding: 8px 52px
+      @media screen and ( max-width: 1366px )
+        font-size: 16px
+        line-height: 28px
+      @media screen and ( max-width: 500px )
+        font-size: 14px
+        line-height: 22px
+    &::before
+      content: ""
+      width: 15px
+      height: 15px
+      background-image: url(/app/build/img/icon-search.svg)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      position: absolute
+      top: calc(50% - 7.5px)
+      left: 21px
+  &-del
+    position: absolute
+    width: 16px
+    height: 16px
+    top: calc(50% - 8px)
+    right: 16px
+    cursor: pointer
+  &-button
+    button
+      padding: 15px 32px 15px
+      text-align: center
+      line-height: 18px
+      font-size: 14px
+      color: #fff
+      background-color: $lightgreen
+      transition: all 0.4s
+      &:hover
+        background-color: #B5D075
