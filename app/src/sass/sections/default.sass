@@ -20,6 +20,18 @@
         line-height: 34px
     + .container-inner
       margin-top: 68px
+    + .tags .news-tag
+      position: relative
+      z-index: 3
+      display: inline-block
+      margin: 26px auto 0px
+      top: auto
+      right: auto
+    + .tags
+      @include dfr()
+      justify-content: center
+      + .container-inner
+        margin-top: 68px
   .container-inner
     max-width: 730px
     margin: 0 auto
@@ -136,9 +148,10 @@
       margin-top: 39px
       margin-bottom: 29px
   ol
+    padding-left: 12px
     li
       list-style-type: decimal
-      padding-left: 23px
+      padding-left: 12px
       &::marker
         color: $lightgreen
         font-size: 16px
