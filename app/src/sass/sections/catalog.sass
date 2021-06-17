@@ -42,10 +42,10 @@
     &__img
       width: auto
       transform-origin: 50% 50%
-      animation: rotateIt3
-      animation-duration: 90s
-      animation-timing-function: linear
-      animation-iteration-count: infinite
+      // animation: rotateIt3
+      // animation-duration: 90s
+      // animation-timing-function: linear
+      // animation-iteration-count: infinite
       position: relative
       z-index: 1
       @media screen and ( max-width: 767px )
@@ -203,43 +203,43 @@
         color: #fff
         transition: all 0.4s
 
-.catalog-item
-  &__wrapper
-    border: 1px solid #E9ECE6
-    height: 169px
-    overflow: hidden
-    position: relative
-    z-index: 1
-    transition: all 0.4s
-    @media screen and ( max-width: 1440px )
-      height: 157px
-    &::before
-      content: ""
-      width: 100px
-      height: 100px
-      border-radius: 50%
-      background-color: #E9ECE6
-      position: absolute
-      bottom: -52px
-      right: -50px
+  .catalog-item
+    &__wrapper
+      border: 1px solid #E9ECE6
+      height: 169px
+      overflow: hidden
+      position: relative
+      z-index: 1
       transition: all 0.4s
-    &::after
-      content: ""
-      width: 11px
-      height: 18px
-      background-image: url(/app/build/img/catalog-arrow.png)
-      background-repeat: no-repeat
-      background-size: contain
+      @media screen and ( max-width: 1440px )
+        height: 157px
+      &::before
+        content: ""
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        background-color: #E9ECE6
+        position: absolute
+        bottom: -52px
+        right: -50px
+        transition: all 0.4s
+      &::after
+        content: ""
+        width: 11px
+        height: 18px
+        background-image: url(/app/build/img/catalog-arrow.png)
+        background-repeat: no-repeat
+        background-size: contain
+        position: absolute
+        bottom: 8px
+        right: 14px
+    &__img
+      height: 250px
       position: absolute
-      bottom: 8px
-      right: 14px
-  &__img
-    height: 250px
-    position: absolute
-    top: 0
-    left: calc(50% - 125px)
-    z-index: 2
-    @media screen and ( max-width: 1440px )
-      height: 183px
-      width: 183px
-      left: calc(50% - 91.5px)
+      top: 0
+      left: calc(50% - 125px)
+      z-index: 2
+      @media screen and ( max-width: 1440px )
+        height: 183px
+        width: 183px
+        left: calc(50% - 91.5px)
