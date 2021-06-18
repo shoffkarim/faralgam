@@ -1,0 +1,16 @@
+doctype html
+html
+  head(lang="ru")
+    include includes/__head
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a22a6a2d-6415-4ac8-a004-1299c4e5667a&lang=ru_RU" type="text/javascript">
+    </script>
+  body
+    include components/header
+    .main
+      include sections/contacts
+    include components/footer
+    include sections/galleryPopup
+    include sections/callbackPopup
+    include sections/searchPopup
+    include includes/__scripts
+    <script src="js/ymaps-init.js"></script>
