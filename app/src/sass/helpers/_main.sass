@@ -233,3 +233,24 @@ body
           transition: all 0.4s
 .hidden
   display: none
+
+.text-banner
+  width: 100%
+  background-color: #B5D075
+  &__wrapper
+    max-width: 735px
+    margin: 0 auto
+    text-align: center
+    padding: 130px 0px 140px
+  &__text
+    font-size: 24px
+    line-height: 30px
+    font-weight: 600
+    color: #fff
+    margin-top: 24px
+    @media screen and ( max-width: 767px )
+      font-size: 22px
+      line-height: 26px
+    @media screen and ( max-width: 500px )
+      font-size: 20px
+      line-height: 24px
