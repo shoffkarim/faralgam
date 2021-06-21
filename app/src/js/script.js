@@ -99,18 +99,25 @@ let awardsSlider = new Swiper(".awards-slider", {
     prevEl: ".awards-btn-prev",
   },
   breakpoints: {
-    320: {
-      slidesPerView: 1.2,
-      spaceBetween: 15
-    },
-    650: {
-      slidesPerView: 2.5,
-    },
-    768: {
-      slidesPerView: 3.5
-    },
     1366: {
       slidesPerView: 9
+    }
+  }
+});
+
+let newsSlider = new Swiper(".news-slider", {
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  navigation: {
+    nextEl: ".news-btn-next",
+    prevEl: ".news-btn-prev",
+  },
+  breakpoints: {
+    1366: {
+      slidesPerView: 1
     }
   }
 });
