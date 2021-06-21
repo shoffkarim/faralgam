@@ -99,7 +99,19 @@ let awardsSlider = new Swiper(".awards-slider", {
     prevEl: ".awards-btn-prev",
   },
   breakpoints: {
-    1366: {
+    320: {
+      slidesPerView: 2.5
+    },
+    480: {
+      slidesPerView: 4
+    },
+    767: {
+      slidesPerView: 5
+    },
+    1200: {
+      slidesPerView: 7
+    },
+    1367: {
       slidesPerView: 9
     }
   }
