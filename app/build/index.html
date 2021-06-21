@@ -323,7 +323,7 @@
             </div>
             <div class="gallery-main">
               <div class="gallery-main__text">Посмотрите видео о компании</div>
-              <button class="gallery-main__button js-video-btn"><svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class="gallery-main__button js-video-btn js-popup-open" data-popup="video"><svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="32.5" cy="32.5" r="32.5" fill="#84BD00"/>
 <path d="M29 26.5299C29 26.2967 29.2544 26.1526 29.4543 26.2726L38.5713 31.7428C38.7655 31.8593 38.7655 32.1407 38.5713 32.2572L29.4543 37.7274C29.2544 37.8474 29 37.7033 29 37.4701V26.5299Z" fill="white"/>
 </svg>
@@ -656,6 +656,19 @@
       <p class="cookie-text">Мы используем файлы <a href="">cookie</a> для того, чтобы предоставить Вам больше возможностей при использовании сайта.</p>
       <div class="cookie-button">
         <button class="btn btn--green js-btn-cookie">Хорошо</button>
+      </div>
+    </div>
+    <div class="popup popup-video js-popup" data-popup="video">
+      <div class="popup-overlay"></div>
+      <div class="popup-container">
+        <div class="video-wrapper"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/vYPYgHwf2KA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+      <div class="popup-close">
+        <button><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 1L1 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+<path d="M1 1L25 25" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+</svg>
+        </button>
       </div>
     </div>
     <script src="js/swiper.min.js"></script>
