@@ -90,4 +90,29 @@ let cardSlider = new Swiper(".card-slider", {
   },
 });
 
+let awardsSlider = new Swiper(".awards-slider", {
+  slidesPerView: 9,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".awards-btn-next",
+    prevEl: ".awards-btn-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 15
+    },
+    650: {
+      slidesPerView: 2.5,
+    },
+    768: {
+      slidesPerView: 3.5
+    },
+    1366: {
+      slidesPerView: 9
+    }
+  }
+});
+
 scrollMagic();

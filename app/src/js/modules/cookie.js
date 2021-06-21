@@ -6,13 +6,15 @@ class Cookie {
   }
 
   init() {
-    const cookie = document.querySelector(".cookie");
-    const btnCloseCookie = document.querySelector(".js-btn-cookie");
-    btnCloseCookie.addEventListener("click", function (e) {
-      e.preventDefault();
-      cookie.classList.remove("cookie-open");
-      // this.setCookie("cookie", "close");;
-    });
+    if (document.querySelector(".cookie")) {
+      const cookie = document.querySelector(".cookie");
+      const btnCloseCookie = document.querySelector(".js-btn-cookie");
+      btnCloseCookie.addEventListener("click", function (e) {
+        e.preventDefault();
+        cookie.classList.remove("cookie-open");
+        // this.setCookie("cookie", "close");;
+      });
+    }
   }
 
   // TO DO когда будет тестовая сделать сохранение куки
