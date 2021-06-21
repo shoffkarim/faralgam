@@ -54,6 +54,62 @@ function scrollMagic() {
         .addTo(controller)
     );
   }
+  if (
+    document.documentElement.clientWidth > 1200 && document.querySelector(".js-numbers")
+  ) {
+    let controller = new ScrollMagic.Controller({
+      loglevel: 0,
+    });
+    let scenes = [];
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".js-numbers",
+        duration: "200%",
+        triggerHook: 0.8,
+        offset: 0,
+      })
+        .setClassToggle(".js-numbers", "animation")
+        .addTo(controller)
+    );
+  }
+  if (
+    document.documentElement.clientWidth > 1200 && document.querySelector(".js-achievements")
+  ) {
+    let controller = new ScrollMagic.Controller({
+      loglevel: 0,
+    });
+    let scenes = [];
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".about-achievements__background--1",
+        duration: "120%",
+        triggerHook: 1,
+        offset: 0,
+      })
+        .setClassToggle(".about-achievements__background--1", "show")
+        .addTo(controller)
+    );
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".about-achievements__background--2",
+        duration: "120%",
+        triggerHook: 1,
+        offset: 0,
+      })
+        .setClassToggle(".about-achievements__background--2", "show")
+        .addTo(controller)
+    );
+    scenes.push(
+      new ScrollMagic.Scene({
+        triggerElement: ".about-achievements__background--3",
+        duration: "120%",
+        triggerHook: 1,
+        offset: 0,
+      })
+        .setClassToggle(".about-achievements__background--3", "show")
+        .addTo(controller)
+    );
+  }
 }
 
 export default scrollMagic;
