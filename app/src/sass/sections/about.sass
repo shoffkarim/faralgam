@@ -48,7 +48,7 @@
       @media screen and ( max-width: 1366px )
         max-width: 425px
       @media screen and ( max-width: 1000px )
-        max-width: none
+        max-width: 700px
   &-achievements
     max-width: 964px
     margin: 223px auto 0
@@ -120,9 +120,9 @@
         top: 83px
         left: -179px
         animation-name: flyingPack
-        animation-duration: 5s
+        animation-duration: 12.5s
         animation-iteration-count: infinite
-        animation-timing-function: ease-in-out
+        animation-timing-function: linear
         z-index: 1
         @media screen and ( max-width: 1366px )
           width: 353px
@@ -136,9 +136,9 @@
         top: 230px
         left: 271px
         animation-name: flyingPack
-        animation-duration: 10s
+        animation-duration: 25s
         animation-iteration-count: infinite
-        animation-timing-function: ease-in-out
+        animation-timing-function: linear
         z-index: 2
         @media screen and ( max-width: 1366px )
           top: 238px
@@ -153,9 +153,9 @@
         left: auto
         right: -74px
         animation-name: flyingPack
-        animation-duration: 3s
+        animation-duration: 8s
         animation-iteration-count: infinite
-        animation-timing-function: ease-in-out
+        animation-timing-function: linear
         z-index: 1
         @media screen and ( max-width: 1366px )
           top: 99px
@@ -305,7 +305,6 @@
       width: 100%
     @media screen and ( max-width: 767px )
       flex-direction: column
-      align-items: center
       padding: 70px 20px 20px
     &__title
       font-size: 50px
@@ -347,10 +346,14 @@
     &__preview
       max-width: 228px
       margin-top: 12px
+      cursor: pointer
       @media screen and ( max-width: 1000px )
         margin-left: 30px
       @media screen and ( max-width: 767px )
         margin-left: 0px
+      &:hover
+        span
+          color: $lightgreen
       &__img
         width: 100%
         img
@@ -369,6 +372,7 @@
         line-height: 22px
         font-weight: 600
         color: $green
+        transition: all 0.4s
         @media screen and ( max-width: 500px )
           font-size: 14px
           line-height: 18px
@@ -379,6 +383,8 @@
     @media screen and ( max-width: 1366px )
       padding: 0 40px
       margin-top: 130px
+    @media screen and ( max-width: 767px )
+      margin-bottom: 50px
     &__list
       margin-top: 82px
       @include dfr()
@@ -445,6 +451,8 @@
         bottom: 0
         left: 0
         transition: all 0.4s
+        @media screen and ( max-width: 1200px )
+          width: 100%
       &:last-child
         &::before
           display: none
@@ -455,6 +463,8 @@
       color: #fff
       margin-right: 30px
       opacity: 0
+      @media screen and ( max-width: 1200px )
+        opacity: 1
       @media screen and ( max-width: 1000px )
         font-size: 35px
         line-height: 42px
@@ -471,6 +481,8 @@
       color: #fff
       max-width: 476px
       opacity: 0
+      @media screen and ( max-width: 1200px )
+        opacity: 1
       @media screen and ( max-width: 767px )
         font-size: 26px
         line-height: 30px
@@ -485,6 +497,8 @@
       width: 100%
       height: 100%
       opacity: 0
+      @media screen and ( max-width: 1200px )
+        opacity: 1
       @media screen and ( max-width: 767px )
         display: none
       img
@@ -550,6 +564,8 @@
       margin-left: 12.5px
       margin-bottom: 29px
       text-align: center
+      @media screen and ( max-width: 500px )
+        margin-bottom: 10px
       a
         font-size: 30px
         line-height: 36px
@@ -558,12 +574,15 @@
         border-bottom: 1px solid transparent
         transition: all 0.4s
         text-align: center
-        @media screen and ( max-width: 767px )
+        @media screen and ( max-width: 100px )
           font-size: 26px
           line-height: 30px
+        @media screen and ( max-width: 767px )
+          font-size: 18px
+          line-height: 24px
         @media screen and ( max-width: 500px )
-          font-size: 22px
-          line-height: 26px
+          font-size: 14px
+          line-height: 20px
         &:hover
           color: #F3BDC1
           border-bottom-color: #F3BDC1
@@ -587,7 +606,7 @@
         left: 182px
         animation-name: flyingVeg-1
         animation-iteration-count: infinite
-        animation-duration: 7s
+        animation-duration: 12s
         animation-timing-function: ease-in-out
       &--2
         position: absolute
@@ -596,7 +615,7 @@
         right: -82px
         animation-name: flyingVeg-2
         animation-iteration-count: infinite
-        animation-duration: 5s
+        animation-duration: 10s
         animation-timing-function: ease-in-out
       &--3
         position: absolute
@@ -604,16 +623,16 @@
         left: -18px
         animation-name: flyingVeg-3
         animation-iteration-count: infinite
-        animation-duration: 9s
-        animation-timing-function: ease-in-out
+        animation-duration: 14s
+        animation-timing-function: linear
       &--4
         position: absolute
         top: calc(50% + 82px)
         left: calc(50% - 79px)
         animation-name: flyingVeg-4
         animation-iteration-count: infinite
-        animation-duration: 15s
-        animation-timing-function: ease-in-out
+        animation-duration: 20s
+        animation-timing-function: linear
   &-pluses
     @include dfr()
     justify-content: center
@@ -624,6 +643,12 @@
       margin-left: 9px
       @media screen and ( max-width: 1000px )
         margin-bottom: 20px
+      @media screen and ( max-width: 400px )
+        width: calc(50% - 20px)
+        img
+          width: 100%
+          height: auto
+          object-fit: contain
 
 .news
   &-slide
@@ -774,7 +799,7 @@
       height: 100%
       object-fit: contain
       circle
-        fill: #F4F5F3
+        fill: #fff
         transition: all 0.4s
       path
         stroke: #567B00
