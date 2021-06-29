@@ -69,7 +69,7 @@ const gallerySlider = new Swiper(".gallery-popup-slider", {
 });
 const galleryBtns = document.querySelectorAll(".js-gallery-btn");
 galleryBtns.forEach((btn) => btn.addEventListener("click", function () {
-  gallerySlider.slideTo(btn.dataset.id - 1);
+  gallerySlider.slideTo(btn.dataset.id - 1, 0);
 }));
 
 let cardThumbSlider = new Swiper(".card-thumb", {

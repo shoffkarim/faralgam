@@ -3,17 +3,16 @@
   height: 100%
   position: fixed
   top: 0
-  right: -100%
+  right: 0
   opacity: 0
   visibility: hidden
   transition: all 0.8s
-  z-index: 100
+  z-index: -10
   &-open
-    width: 100%
     opacity: 1
-    right: 0
     visibility: visible
     transition: all 0.8s
+    z-index: 100
   &-gallery
     .popup-container
       height: 100%

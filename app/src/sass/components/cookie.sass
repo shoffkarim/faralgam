@@ -7,6 +7,8 @@
   justify-content: center
   visibility: hidden
   z-index: 100
+  @media screen and ( max-width: 500px )
+    flex-direction: column
   &-open
     position: fixed
     bottom: 0
@@ -25,6 +27,8 @@
     @media screen and ( max-width: 500px )
       font-size: 14px
       line-height: 22px
+      margin-right: 0px
+      margin-bottom: 20px
     a
       font-size: 18px
       line-height: 30px
