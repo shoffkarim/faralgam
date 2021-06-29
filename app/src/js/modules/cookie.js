@@ -11,7 +11,7 @@ class Cookie {
       const btnCloseCookie = document.querySelector(".js-btn-cookie");
       btnCloseCookie.addEventListener("click", function (e) {
         e.preventDefault();
-        cookie.classList.remove("cookie-open");
+        cookie.remove();
         // this.setCookie("cookie", "close");;
       });
     }
