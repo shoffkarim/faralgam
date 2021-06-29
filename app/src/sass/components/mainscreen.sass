@@ -2,8 +2,17 @@
   position: relative
   height: 100vh
   min-height: 700px
-  @media screen and ( max-height: 700px )
-    min-height: auto
+  @media screen and ( max-width: 1200px )
+    height: auto
+    min-height: 580px
+  @media screen and ( max-width: 767px )
+    min-height: 500px
+  @media screen and ( max-width: 650px )
+    min-height: 400px
+  @media screen and ( max-width: 500px )
+    min-height: 500px
+  @media screen and ( max-width: 400px )
+    min-height: 400px
   .text-container
     position: relative
     height: 385px
@@ -11,6 +20,8 @@
     overflow: hidden
     @media screen and ( max-width: 1366px )
       margin-top: -48px
+    @media screen and ( max-width: 550px )
+      margin-top: -125px
     svg
       position: relative
       width: 100%
@@ -95,38 +106,141 @@
     z-index: 3
     width: 100%
     height: 100%
-    @media screen and ( max-width: 500px )
-      display: none
+    // @media screen and ( max-width: 500px )
+    //   display: none
     &__elem
       position: absolute
       &--1
         top: 370px
         left: 260px
+        @media screen and ( max-width: 1366px )
+          top: 329px
+          left: 180px
+          width: 137px
+        @media screen and ( max-width: 767px )
+          top: 339px
+          left: 94px
+          width: 108px
+        @media screen and ( max-width: 550px )
+          top: 298px
+          left: 53px
+          width: 67px
+        @media screen and ( max-width: 450px )
+          left: 20px
       &--2
         top: calc(100% - 80px)
         left: calc(100% - 285px)
+        @media screen and ( max-width: 1366px )
+          top: calc(100% - 214px)
+          left: calc(100% - 187px)
+          width: 70px
+        @media screen and ( max-width: 1200px )
+          top: calc(100% + 58px)
+        @media screen and ( max-width: 767px )
+          display: none
       &--3
         top: 580px
         left: calc(50% + 390px)
+        @media screen and ( max-width: 1366px )
+          top: 437px
+          left: calc(50% + 269px)
+          width: 167px
+        @media screen and ( max-width: 767px )
+          top: 372px
+          left: calc(50% + 226px)
+        @media screen and ( max-width: 550px )
+          top: 338px
+          left: calc(50% + 150px)
+          width: 130px
+        @media screen and ( max-width: 450px )
+          top: 230px
+          width: 64px
       &--4
         top: 110px
         left: 0px
+        @media screen and ( max-width: 1366px )
+          top: 122px
+          left: 0
+          width: 85px
+        @media screen and ( max-width: 550px )
+          top: 188px
+          left: 0
+          width: 71px
       &--5
         top: 315px
         left: 110px
+        @media screen and ( max-width: 1366px )
+          top: 285px
+          left: 63px
+          width: 32px
+        @media screen and ( max-width: 550px )
+          top: 259px
+          left: 75px
+          width: 32px
       &--6
         top: calc(100% - 60px)
         left: calc(50% + 320px)
+        @media screen and ( max-width: 1366px )
+          top: calc(100% - 198px)
+          left: calc(50% + 219px)
+          width: 45px
+        @media screen and ( max-width: 767px )
+          top: calc(100%)
+        @media screen and ( max-width: 550px )
+          left: calc(100% - 20px)
+        @media screen and ( max-width: 450px )
+          top: 90%
       &--7
         top: calc(100% - 55px)
         left: calc(100% - 100px)
+        @media screen and ( max-width: 1366px )
+          top: calc(100% - 196px)
+          left: calc(100% - 38px)
+          width: 77px
+        @media screen and ( max-width: 1200px )
+          top: calc(100% + 25px)
+        @media screen and ( max-width: 767px )
+          top: calc(100% - 203px)
+        @media screen and ( max-width: 550px )
+          top: calc(100% - 125px)
+        @media screen and ( max-width: 500px )
+          top: 230px
+        @media screen and ( max-width: 450px )
+          top: calc(50% + 75px)
+        @media screen and ( max-width: 400px )
+          left: calc(100% - 95px)
       &--8
         top: 375px
         left: 515px
+        @media screen and ( max-width: 1366px )
+          top: 333px
+          left: 378px
+          width: 98px
+        @media screen and ( max-width: 767px )
+          left: 441px
+        @media screen and ( max-width: 550px )
+          display: none
+      &--9
+        top: calc(50% + 166px)
+        left: calc(100% - 216px)
+        @media screen and ( max-width: 1366px )
+          width: 57px
+          top: calc(50% + 46px)
+          left: calc(100% - 197px)
+        @media screen and ( max-width: 1200px )
+          top: calc(50% + 116px)
+          left: calc(100% - 60px)
+        @media screen and ( max-width: 767px )
+          display: none
+
       // animation-name: fly1
       // animation-timing-function: linear
       // animation-iteration-count: infinite
       // animation-duration: 5s
+    img
+      width: 100%
+      height: auto
+      object-fit: contain
 @keyframes imgInText
   0%
     transform: scale(1.0)
@@ -151,4 +265,3 @@
     background-position-x: 0%
   100%
     background-position-x: -10000%
-
