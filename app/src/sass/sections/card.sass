@@ -49,21 +49,34 @@
     @media screen and ( max-width: 500px )
       flex-direction: column
     .btn
-      padding: 15px 93px 14px
+      padding: 22px 93px 20px
       margin-right: 13px
       @media screen and ( max-width: 1200px )
-        padding: 15px 50px 14px
+        padding: 22px 50px 20px
       &--white
-        padding: 15px 87px 14px
+        padding: 22px 87px 20px
         text-align: center
         line-height: 18px
         @media screen and ( max-width: 1200px )
-          padding: 15px 50px 14px
+          padding: 22px 50px 20px
         @media screen and ( max-width: 500px )
           margin-top: 10px
+  &-desc
+    &--mobile
+      display: none
+      @media screen and ( max-width: 900px )
+        display: block
+        margin-bottom: 30px
+        .card-info
+          display: block
+        .card-comp
+          display: flex
+
   &-info
     @media screen and ( max-width: 1366px )
       max-width: 435px
+    @media screen and ( max-width: 900px )
+      display: none
     p
       line-height: 27px
       color: #000
@@ -74,11 +87,15 @@
   &-comp
     @include dfr()
     flex-wrap: wrap
+    @media screen and ( max-width: 900px )
+      display: none
     &__item
       @include dfc()
       margin-right: 40px
       &:last-child
         margin-right: 0px
+      @media screen and ( max-width: 767px )
+        margin-bottom: 20px
     &__green
       font-size: 24px
       line-height: 29px
@@ -106,6 +123,8 @@
     margin-top: 15px
     @media screen and ( max-width: 1366px )
       padding-bottom: 140px
+    @media screen and ( max-width: 900px )
+      padding-bottom: 100px
     @media screen and ( max-width: 500px )
       padding-bottom: 50px
   &-thumb
@@ -204,6 +223,8 @@
     @media screen and ( max-width: 900px )
       max-width: none
       width: 100%
+      padding: 101px 40px 99px
+    @media screen and ( max-width: 767px )
       padding: 101px 20px 99px
   &__title
     font-size: 24px
