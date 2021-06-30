@@ -13,25 +13,25 @@
     margin-top: 100px
     @media screen and ( max-width: 1000px )
       width: 51%
-      margin-top: 50px
+      margin-top: 100px
     @media screen and ( max-width: 767px )
       width: 100%
     &:nth-child(2)
       margin-top: 0px
       @media screen and ( max-width: 1000px )
-        margin-top: 50px
+        margin-top: 100px
     &:nth-child(3)
       margin-top: 165px
       @media screen and ( max-width: 1000px )
-        margin-top: 50px
+        margin-top: 100px
     &:nth-child(4)
       margin-top: 85px
       @media screen and ( max-width: 1000px )
-        margin-top: 50px
+        margin-top: 100px
     &:nth-child(5)
       margin-top: 185px
       @media screen and ( max-width: 1000px )
-        margin-top: 50px
+        margin-top: 100px
     &__href
       @include dfc()
       align-items: center
@@ -95,6 +95,7 @@
       max-width: none
       margin-top: 50px
       margin-bottom: 30px
+      margin-right: auto
   &__title
     font-size: 72px
     line-height: 80px
@@ -121,6 +122,8 @@
     @media screen and ( max-width: 1366px )
       font-size: 16px
       line-height: 28px
+    @media screen and ( max-width: 950px )
+      max-width: 700px
     @media screen and ( max-width: 767px )
       margin-bottom: 30px
     @media screen and ( max-width: 500px )
@@ -170,8 +173,9 @@
     font-weight: 600
     color: $black
     padding-left: 30px
-    padding-right: 30px
-    margin-top: 77px
+    padding-right: 50px
+    margin-top: auto
+    margin-bottom: 25px
     transition: all 0.4s
     @media screen and ( max-width: 1440px )
       font-size: 16px
@@ -180,6 +184,8 @@
     flex-grow: 1
     @media screen and ( max-width: 1700px )
       width: 100%
+    @media screen and ( max-width: 500px )
+      display: none
     img
       display: block
       margin-left: auto
@@ -209,6 +215,7 @@
       height: 169px
       overflow: hidden
       position: relative
+      @include dfc()
       z-index: 1
       transition: all 0.4s
       @media screen and ( max-width: 1440px )

@@ -30,8 +30,7 @@
         width: 25px
         height: 25px
       &:hover
-        background-color: $lightgreen
-        color: #fff
+        color: $lightgreen
       &.active
         background-color: $lightgreen
         color: #fff
@@ -54,6 +53,14 @@
   &-btn
     @include dfr()
     align-items: flex-start
+    cursor: pointer
+    &:hover
+      circle
+        fill: $lightgreen
+        transition: all 0.4s
+      path
+        stroke: #fff
+        transition: all 0.4s
     svg
       @media screen and ( max-width: 1366px )
         width: 32px
@@ -61,6 +68,12 @@
       @media screen and ( max-width: 500px )
         width: 25px
         height: 25px
+      circle
+        fill: #F4F5F3
+        transition: all 0.4s
+      path
+        stroke: #567B00
+        transition: all 0.4s
     &__prev
       margin-right: 20px
       @media screen and ( max-width: 500px )
