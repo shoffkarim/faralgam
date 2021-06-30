@@ -3,4 +3,4 @@ node_modules
 bemto
 webpack.config.js
 postcss.config.js
-app/build/js/script.js
+app/build/js/*.js

@@ -12,9 +12,7 @@ class Popup {
         const typePopup = btn.dataset.popup;
         const popup = document.querySelector(`.js-popup[data-popup=${typePopup}]`);
         popup.classList.add("popup-open");
-        if (typePopup !== "callback") {
-          document.body.classList.add("no-overflow");
-        }
+        document.body.classList.add("no-overflow");
       }));
       const popups = document.querySelectorAll(".js-popup");
       popups.forEach(function (item) {

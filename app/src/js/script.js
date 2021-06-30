@@ -6,6 +6,7 @@ import '../sass/style.sass';
 import BubbleCreator from './modules/bubble-hover';
 import Cookie from './modules/cookie';
 import CustomSelect from './modules/custom-select';
+import InputMask from './modules/imask-init';
 import Popup from './modules/popup';
 import scrollMagic from "./modules/scrollMagicInit";
 import Search from './modules/search';
@@ -31,6 +32,7 @@ const select = new CustomSelect();
 const valid = new Validation();
 const search = new Search();
 const cookie = new Cookie();
+const inputMask = new InputMask();
 
 let shopsSlider = new Swiper(".shops-slider", {
   slidesPerView: 5,
